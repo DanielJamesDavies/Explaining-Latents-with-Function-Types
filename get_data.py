@@ -234,7 +234,7 @@ def run():
         def replaceDatasetPathsWithReadablePaths(curr_path, dataset_paths):
             print("    ", curr_path, "                         ", end="\r")
             path_contents = os.listdir(curr_path)
-            path_contents = sorted(path_contents, key=lambda name: (not os.path.isdir(name), name))
+            path_contents = sorted(path_contents, key=lambda name: (".txt" in name, name))
             for name in path_contents:
                 if name.split(".")[-1] == "txt":
                     if "items.txt" in path_contents:
@@ -258,7 +258,7 @@ def run():
             
         dataset_paths = replaceDatasetPathsWithReadablePaths("../../datasets/text", dataset_paths)
             
-        print("  Getting Dataset Paths Data...")
+        print("  Getting Dataset Paths Data...                                                                                    ")
         dataset_paths_data = []
         for dataset_path in dataset_paths.split("<|SPLIT|>"):
             dataset_path = dataset_path[5:].split("/")[2:]
