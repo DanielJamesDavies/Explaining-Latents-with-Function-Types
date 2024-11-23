@@ -12,9 +12,6 @@ from transformers import AutoTokenizer
 
 
 sae_dim = 40960
-num_sequences_saved_per_latent = 80
-num_tokens_per_sequence = 64
-num_other_latents_per_sequence = 64
 
 latents_path = "../../automated_interpretability/latent_data"
 
