@@ -94,9 +94,6 @@ def collectDataForConnectingTokens(layer_top_tokens_sorted, layer_top_values_sor
     layer_top_token_relationships = None
     top_k_token_relationships = 3
     for latent_index in range(layer_top_tokens_sorted.shape[0]):
-        if latent_index > 4096:
-            break
-        
         layer_tokens = layer_top_tokens_sorted[latent_index].clone()
         layer_values = layer_top_values_sorted[latent_index].clone()
         layer_tokens[layer_values == 0] = -1
@@ -145,6 +142,15 @@ def collectDataForConnectingTokens(layer_top_tokens_sorted, layer_top_values_sor
     print("    Saving top_token_relationships.h5")
     with h5py.File(f"{folder_to_save}/top_token_relationships.h5", "w") as h5_file:
         h5_file.create_dataset("tensor", data=layer_top_token_relationships.cpu())
+        
+       
+        
+        
+        
+def collectDataForDetectingDatasetTopic(layer_top_tokens_sorted, layer_top_values_sorted, folder_to_save, tokenizer):
+    start_time = time.time()
+    for latent_index in range(layer_top_tokens_sorted.shape[0]):
+        print("")
             
             
             
@@ -244,6 +250,7 @@ def run():
         # For DetectingDatasetTopic()
         print("")
         print("  For DetectingDatasetTopic()")
+        collectDataForDetectingDatasetTopic(layer_top_tokens_sorted, layer_top_values_sorted, folder_to_save, tokenizer)
         
         # For DetectingSpecificConcept()
         print("")
