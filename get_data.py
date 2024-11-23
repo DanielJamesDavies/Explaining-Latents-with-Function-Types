@@ -34,6 +34,66 @@ class TuringLLMConfig:
     n_embd: int = 1024
     hidden_size: int = 4096
     norm_eps: float = 1e-5
+    
+    
+    
+    
+
+def getDatasetPathsData():
+    with open(f'{latents_path}/dataset_paths.txt', 'r') as f:
+        dataset_paths = "<|SPLIT|>".join(f.read().splitlines())
+    
+    dataset_path_names = {}
+    def getDatasetPathNames(curr_path, dataset_path_names):
+        path_contents = os.listdir(curr_path)
+        path_contents = sorted(path_contents, key=lambda name: (".txt" in name, name))
+        for name in path_contents:
+            if name.split(".")[-1] == "txt":
+                if "items.txt" in path_contents:
+                    with open(f'{curr_path}/items.txt', 'r', encoding='utf-8') as f:
+                        items = [item.strip() for item in f.read().splitlines() if len(item.strip()) != 0]
+                    curr_path_excluding_front = "/".join(curr_path.split("/")[6:])
+                    for i in range(len(items)):
+                        dataset_path_names[str(curr_path_excluding_front + "/items/" + str(i))] = str(items[i])
+                elif "public_figures.txt" in path_contents:
+                    with open(f'{curr_path}/public_figures.txt', 'r', encoding='utf-8') as f:
+                        public_figures = [item.strip() for item in f.read().splitlines() if len(item.strip()) != 0]
+                    curr_path_excluding_front = "/".join(curr_path.split("/")[6:])
+                    for i in range(len(public_figures)):
+                        dataset_path_names[str(curr_path_excluding_front + "/public_figures/" + str(i))] = str(public_figures[i])
+                elif "short_stories.txt" in path_contents:
+                    with open(f'{curr_path}/short_stories.txt', 'r', encoding='utf-8') as f:
+                        short_stories = [item.strip() for item in f.read().splitlines() if len(item.strip()) != 0]
+                    curr_path_excluding_front = "/".join(curr_path.split("/")[6:])
+                    for i in range(len(short_stories)):
+                        dataset_path_names[str(curr_path_excluding_front + "/items/" + str(i))] = str(short_stories[i])
+                        dataset_path_names[str(curr_path_excluding_front + "/short_stories/" + str(i))] = str(short_stories[i])
+            elif "." not in name:
+                dataset_path_names = getDatasetPathNames(curr_path + "/" + name, dataset_path_names)
+        return dataset_path_names
+    dataset_path_names = getDatasetPathNames("../../datasets/text", dataset_path_names)
+        
+    dataset_paths_data = [False for _ in range(len(dataset_paths.split("<|SPLIT|>")))]
+    for i, dataset_path in enumerate(dataset_paths.split("<|SPLIT|>")):
+        dataset_path = dataset_path[5:].split("/")[2:]
+        new_dataset_path = dataset_path[0]
+        for j, folder in enumerate(dataset_path[1:]):
+            if str("/".join(dataset_path[:j+1]) + "/" + folder) in dataset_path_names:
+                new_dataset_path += "/" + dataset_path_names[str("/".join(dataset_path[:j+1]) + "/" + folder)]
+            else:
+                new_dataset_path += "/" + folder
+        dataset_path_list = [dataset_path[0]]
+        for folder in new_dataset_path.split("/")[1:]:
+            if folder == "items" or folder.endswith(".txt") or folder.isnumeric():
+                continue
+            if folder[-1].isdigit():
+                folder = folder[:-1]
+            if folder not in dataset_path_list:
+                dataset_path_list.append(folder)
+        dataset_paths_data[i] = dataset_path_list
+        
+    return dataset_paths_data
+            
             
             
             
@@ -147,11 +207,20 @@ def collectDataForConnectingTokens(layer_top_tokens_sorted, layer_top_values_sor
         
         
         
-def collectDataForDetectingDatasetTopic(layer_top_tokens_sorted, layer_top_values_sorted, folder_to_save, tokenizer, dataset_paths_data):
+def collectDataForDetectingDatasetTopic(layer_top_dataset_paths, folder_to_save, tokenizer, dataset_paths_data):
     start_time = time.time()
-    for latent_index in range(layer_top_tokens_sorted.shape[0]):
-        print("")
-            
+    print("layer_top_dataset_paths.shape", layer_top_dataset_paths.shape)
+    for latent_index in range(layer_top_dataset_paths.shape[0]):
+        if latent_index < 4:
+            topics_frequencies = {}
+            for key in [item for index in layer_top_dataset_paths[latent_index] for item in dataset_paths_data[index]]:
+                if key in topics_frequencies:
+                    topics_frequencies[key] += 1
+                else:
+                    topics_frequencies[key] = 1
+            topics_sorted = sorted(topics_frequencies, key=lambda x: topics_frequencies[x], reverse=True)
+            print("topics_sorted", topics_sorted)
+            print("")
             
             
             
@@ -203,7 +272,7 @@ def run():
         print("  Getting Top Sequences Data...")
         with h5py.File(f"{latents_path}/latents_sae_tokens_from_sequence.h5", 'r') as h5f:
             layer_top_tokens = np.asarray(h5f['tensor'][layer_index, :, :, :])
-            layer_top_dataset_paths = torch.tensor(layer_top_tokens[..., :1])
+            layer_top_dataset_paths = torch.tensor(layer_top_tokens[..., 0])
             layer_top_tokens = torch.tensor(layer_top_tokens[..., 1:]).to(device)
         with h5py.File(f"{latents_path}/latents_sae_values_from_sequence.h5", 'r') as h5f:
             layer_top_values = np.asarray(h5f['tensor'][layer_index, :, :, :])
@@ -227,51 +296,8 @@ def run():
         layer_top_tokens_sorted = torch.gather(layer_top_tokens_dedup, dim=-1, index=indices)
         
         # Get Dataset Paths Data
-        print("  Getting Dataset Paths...")
-        with open(f'{latents_path}/dataset_paths.txt', 'r') as f:
-            dataset_paths = "<|SPLIT|>".join(f.read().splitlines())
-            
-        def replaceDatasetPathsWithReadablePaths(curr_path, dataset_paths):
-            print("    ", curr_path, "                         ", end="\r")
-            path_contents = os.listdir(curr_path)
-            path_contents = sorted(path_contents, key=lambda name: (".txt" in name, name))
-            for name in path_contents:
-                if name.split(".")[-1] == "txt":
-                    if "items.txt" in path_contents:
-                        with open(f'{curr_path}/items.txt', 'r', encoding='utf-8') as f:
-                            items = [item.strip() for item in f.read().splitlines() if len(item.strip()) != 0]
-                        for i in range(len(items)):
-                            dataset_paths = dataset_paths.replace(curr_path[len("../../datasets/"):] + "/" + str(i), curr_path[len("../../datasets/"):] + "/" + str(items[i]))
-                    elif "public_figures.txt" in path_contents:
-                        with open(f'{curr_path}/public_figures.txt', 'r', encoding='utf-8') as f:
-                            public_figures = [item.strip() for item in f.read().splitlines() if len(item.strip()) != 0]
-                        for i in range(len(public_figures)):
-                            dataset_paths = dataset_paths.replace(curr_path[len("../../datasets/"):] + "/" + str(i), curr_path[len("../../datasets/"):] + "/" + str(public_figures[i]))
-                    elif "short_stories.txt" in path_contents:
-                        with open(f'{curr_path}/short_stories.txt', 'r', encoding='utf-8') as f:
-                            short_stories = [item.strip() for item in f.read().splitlines() if len(item.strip()) != 0]
-                        for i in range(len(short_stories)):
-                            dataset_paths = dataset_paths.replace(curr_path[len("../../datasets/"):] + "/" + str(i), curr_path[len("../../datasets/"):] + "/" + str(short_stories[i]))
-                elif "." not in name:
-                    dataset_paths = replaceDatasetPathsWithReadablePaths(curr_path + "/" + name, dataset_paths)
-            return dataset_paths
-            
-        dataset_paths = replaceDatasetPathsWithReadablePaths("../../datasets/text", dataset_paths)
-            
-        print("  Getting Dataset Paths Data...                                                                                    ")
-        dataset_paths_data = []
-        for dataset_path in dataset_paths.split("<|SPLIT|>"):
-            dataset_path = dataset_path[5:].split("/")[2:]
-            dataset_path_list = [dataset_path[0]]
-            for folder in dataset_path[1:]:
-                if folder == "items" or folder.endswith(".txt"):
-                    continue
-                if not folder.isnumeric():
-                    if folder not in dataset_path_list:
-                        dataset_path_list.append(folder)
-            dataset_paths_data.append(dataset_path_list)
-        
-        print(dataset_paths_data)
+        print("  Getting Dataset Paths Data...")
+        dataset_paths_data = getDatasetPathsData()
         
         # # Display Sorted Tokens
         # for i in range(12):
@@ -283,12 +309,12 @@ def run():
         # For SpecificToken()
         print("")
         print("  For SpecificToken()")
-        collectDataForSpecificToken(layer_top_tokens_sorted, layer_top_values_sorted, folder_to_save, tokenizer)
+        # collectDataForSpecificToken(layer_top_tokens_sorted, layer_top_values_sorted, folder_to_save, tokenizer)
         
         # For ConnectingTokens()
         print("")
         print("  For ConnectingTokens()")
-        collectDataForConnectingTokens(layer_top_tokens_sorted, layer_top_values_sorted, folder_to_save, tokenizer)
+        # collectDataForConnectingTokens(layer_top_tokens_sorted, layer_top_values_sorted, folder_to_save, tokenizer)
             
         # For SpecificWord()
         print("")
@@ -297,7 +323,7 @@ def run():
         # For DetectingDatasetTopic()
         print("")
         print("  For DetectingDatasetTopic()")
-        collectDataForDetectingDatasetTopic(layer_top_tokens_sorted, layer_top_values_sorted, folder_to_save, tokenizer, dataset_paths_data)
+        collectDataForDetectingDatasetTopic(layer_top_dataset_paths, folder_to_save, tokenizer, dataset_paths_data)
         
         # For DetectingSpecificConcept()
         print("")
