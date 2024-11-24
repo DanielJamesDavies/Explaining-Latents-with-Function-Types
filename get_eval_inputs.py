@@ -121,14 +121,11 @@ def getDetectingDatasetTopicSentences(latent_index, top_dataset_topics, tokenize
 
 
 def run():
-    
     print("")
     print("Subset Layer Latent Count: ", subset_layer_latent_count)
     
     torch.cuda.empty_cache()
     gc.collect()
-            
-            
             
     # Tokenizer       
     tokenizer_model_id = "microsoft/Phi-3-mini-4k-instruct"
@@ -137,8 +134,6 @@ def run():
     except:
         tokenizer = AutoTokenizer.from_pretrained(tokenizer_model_id, use_fast=True, _fast_init=True)
     print("")
-        
-    
     
     for layer_index in range(TuringLLMConfig.n_layer):
         print("")

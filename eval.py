@@ -1,10 +1,6 @@
-import os
 import time
 import json
-import h5py
-from dotenv import load_dotenv
 from dataclasses import dataclass
-import goodfire
 import torch
 import gc
 from transformers import AutoTokenizer
@@ -16,12 +12,9 @@ from SAE.SAE_TopK import SAE
 
 
 
-load_dotenv()
-GOODFIRE_API_KEY = os.environ.get('GOODFIRE_API_KEY')
-goodfire_client = goodfire.Client(GOODFIRE_API_KEY)
-goodfire_base_model = "meta-llama/Meta-Llama-3-8B-Instruct"
-
-turing_sae_subset_layer_latent_count = 82
+subset_layer_latent_count = 82
+num_tokens_per_sequence = 64
+sequences_per_batch = 256
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
@@ -37,108 +30,21 @@ class TuringLLMConfig:
     
 sae_dim = 40960
 
-
-
-
-
-
-def goodfire_generate(prompt: str = "", model: str = goodfire_base_model) -> str:
-    response = goodfire_client.chat.completions.create(
-        messages=[{ "role": "user", "content": prompt }],
-        model=model,
-        stream=False,
-        max_completion_tokens=24,
-    )
-    return response.choices[0].message['content'].strip()
-
-
-
-
-
-def getTopTokensSentences(latent_index, layer_top_tokens, top_dataset_topics, tokenizer):
-    sentences = []
-    latent_dataset_topics = [topic for topic in top_dataset_topics[latent_index] if topic != "subject"][2:6]
-        
-    variant = goodfire.Variant(goodfire_base_model)
-    for topic in latent_dataset_topics:
-        features, _ = goodfire_client.features.search(topic, model=variant, top_k=2)
-        if features:
-            for feature in features:
-                variant.set(feature, 0.04)
-    
-    for i, token in enumerate(layer_top_tokens[latent_index][:2]):
-        token = token.item()
-        if token == -1:
-            continue
-        decoded_token = tokenizer.decode([token])
-        prompt = f"Early on, use the subword appropriately: '{decoded_token}'. Please write \"Sentence:\" and then write just a short sentence. The sentence should have a word with '{decoded_token}' in it."
-        
-        res = goodfire_generate(prompt)
-        if res.startswith("Sentence:"):
-            res = res[len("Sentence:"):].strip()
-        sentences.append({ "latent_index": latent_index, "type": "top-token", "token": token, "top_token_index": i, "is_variant": False, "text": res })
-            
-        res = goodfire_generate(prompt, variant)
-        if res.startswith("Sentence:"):
-            res = res[len("Sentence:"):].strip()
-        sentences.append({ "latent_index": latent_index, "type": "top-token", "token": token, "top_token_index": i, "is_variant": True, "text": res })
-        
-    return sentences
-
-
-
-
-
-def getConnectingTokensSentences(latent_index, top_token_relationships, tokenizer):
-    sentences = []
-    for i, tokens in enumerate(top_token_relationships[latent_index][:2]):
-        tokens = tokens.tolist()
-        if tokens[0] == -1 or tokens[1] == -1:
-            continue
-        decoded_tokens = tokenizer.batch_decode([[token] for token in tokens])
-        prompt = f"Please write \"Sentence:\" and then write just a short sentence. Using common english, the sentence should have words with '{decoded_tokens[0]}' and '{decoded_tokens[1]}' in them."
-        
-        res = goodfire_generate(prompt)
-        if res.startswith("Sentence:"):
-            res = res[len("Sentence:"):].strip()
-        sentences.append({ "latent_index": latent_index, "type": "connecting-tokens", "tokens": tokens, "connecting_tokens_index": i, "text": res })
-    
-    return sentences
-
-
-
-
-
-def getDetectingDatasetTopicSentences(latent_index, top_dataset_topics, tokenizer):
-    latent_dataset_topics = [topic for topic in top_dataset_topics[latent_index] if topic != "subject"][:6]
-    prompt = f"One sentence. Please just write \"Sentence:\" and then write just a short single sentence surrounding these topics: {', '.join(latent_dataset_topics)}"
-    
-    res = goodfire_generate(prompt)
-    if res.startswith("Sentence:"):
-        res = res[len("Sentence:"):].strip()
-        
-    return [{ "latent_index": latent_index, "type": "detecting-dataset-topic", "topics": latent_dataset_topics, "text": res }]
+turing_sae_latent_values = torch.zeros((12, subset_layer_latent_count))
 
 
 
 
 
 def run():
-    
     print("")
     
     torch.cuda.empty_cache()
     gc.collect()
     
-    
-    
     print("Loading Turing-LLM...")
     max_length = 64 + 1
     turing = TuringLLMForInference(collect_latents=True, max_length=max_length)
-    
-    sae_model = None
-            
-            
             
     # Tokenizer       
     tokenizer_model_id = "microsoft/Phi-3-mini-4k-instruct"
@@ -148,11 +54,7 @@ def run():
         tokenizer = AutoTokenizer.from_pretrained(tokenizer_model_id, use_fast=True, _fast_init=True)
     print("")
         
-    
-    
     for layer_index in range(TuringLLMConfig.n_layer):
-        if layer_index > 0:
-            break
         print("")
         print(f"Layer {layer_index+1}")
         
@@ -160,39 +62,77 @@ def run():
         print("  Loading SAE...")
         sae_model = SAE(TuringLLMConfig.n_embd, sae_dim, 128, only_encoder=True).to(device)
         sae_model = torch.compile(sae_model)
-        sae_model.load(f"../../sparse_autoencoders/sae/sae_layer_{layer_index}.pth")
+        sae_model.load(f"./SAE/sae/sae_layer_{layer_index}.pth")
         if layer_index == 0:
             sae_model.k = 128 + (4 * 16)
         else:
             sae_model.k = 128 + (layer_index * 16)
-           
-        # Load Layer Data 
-        print("  Loading Layer Data...")
-        with h5py.File(f'./latent_data/{layer_index}/layer_top_tokens.h5', 'r') as h5f:
-            layer_top_tokens = torch.tensor(h5f['data']).to(device)
         
-        with h5py.File(f'./latent_data/{layer_index}/top_token_relationships.h5', 'r') as h5f:
-            top_token_relationships = torch.tensor(h5f['data']).to(device)
-        
-        top_dataset_topics = [None for _ in range(turing_sae_subset_layer_latent_count)]
-        with open(f'./latent_data/{layer_index}/top_dataset_topics.jsonl', 'r') as f:
+        # Load Data
+        layer_eval_data = [None for _ in range(subset_layer_latent_count)]
+        with open(f'./latent_data/{layer_index}/eval_inputs.jsonl', 'r') as f:
             for i, line in enumerate(f):
-                if i < turing_sae_subset_layer_latent_count:
-                    top_dataset_topics[i] = json.loads(line)
+                if i < subset_layer_latent_count:
+                    layer_eval_data[i] = json.loads(line)
+               
+        # Tokenize Text
+        for i, layer_eval_input in enumerate(layer_eval_data):
+            layer_eval_input["text_tokens"] = tokenizer.encode(layer_eval_input["text"])[:64]
+            if len(layer_eval_input["text_tokens"]) == 0:
+                print("Error. Not Tokens for input: ", layer_eval_input)
+                layer_eval_data[i] = None
+                continue
+            if len(layer_eval_input["text_tokens"] < 64):
+                while len(layer_eval_input["text_tokens"]) < 64:
+                    layer_eval_input["text_tokens"] = layer_eval_input["text_tokens"] + layer_eval_input["text_tokens"]
+                layer_eval_input["text_tokens"] = layer_eval_input["text_tokens"][:64]
+        layer_eval_data = [layer_eval_input for layer_eval_input in layer_eval_data if layer_eval_input is not None]
+    
+        layer_num_sequences_run = 0
+        for batch_index in range(0, len(layer_eval_data), sequences_per_batch):
+            batch_start_time = time.time()
+            batch_layer_eval_data = layer_eval_data[batch_index:batch_index+sequences_per_batch]
+            print(f"Processing Latents {batch_index+1}-{batch_index+sequences_per_batch+1} / {len(layer_eval_data)} ({((batch_index+1)/len(layer_eval_data))*100:.2f}%)  |  Turing Inference", end="\r")
+            with torch.no_grad():
+                max_length = num_tokens_per_sequence + 1
+                logits, latents = turing.generate_batch([input["text_tokens"] for input in batch_layer_eval_data], max_length=max_length, tokenize=False, decode=False, ignore_end=True)
+    
+            print(f"Processing Latents {batch_index+1}-{batch_index+sequences_per_batch+1} / {len(layer_eval_data)} ({((batch_index+1)/len(layer_eval_data))*100:.2f}%)  |  SAE Inference", end="\r")
+            with torch.no_grad():
+                activations = [torch.split(layer_latents.view(-1, 1024), num_tokens_per_sequence * sequences_per_batch)[0] for layer_latents in latents[0]]
+                x = activations[layer_index].to(device)
+                sae_latents, _, _ = sae_model.encode(x)
+                sae_latents = sae_latents.view(sequences_per_batch, -1, sae_dim).to(device)
+                print(sae_latents.shape)
+                for i in range(sequences_per_batch):
+                    latent_index = layer_eval_data[i+batch_index]["latent_index"]
+                    layer_eval_data[i+batch_index]["activation_value"] = sae_latents[latent_index].item()
+                    turing_sae_latent_values[layer_index] += torch.tensor(sae_latents[0:subset_layer_latent_count], device="cpu")
+                    layer_num_sequences_run += 1
+            
+            print(f"Processing Latents {batch_index+1}-{batch_index+sequences_per_batch+1} / {len(layer_eval_data)} ({((batch_index+1)/len(layer_eval_data))*100:.2f}%)  |  Duration: {time.time()-batch_start_time:.2f}s                      ")
+            print(layer_eval_data[batch_index:batch_index+2])
+            print("")
+            
+        # Get Average Latent Values
+        turing_sae_latent_values[layer_index] = turing_sae_latent_values[layer_index] / layer_num_sequences_run
         
-        # Get Sentences
-        sentences = []
-        for latent_index in range(turing_sae_subset_layer_latent_count):
-            start_time = time.time()
-            print(f"  Getting Sentences for Latent {str(latent_index+1).zfill(len(str(turing_sae_subset_layer_latent_count)))}", end="\r")
-            sentences = sentences + getTopTokensSentences(latent_index, layer_top_tokens, top_dataset_topics, tokenizer)
-            sentences = sentences + getConnectingTokensSentences(latent_index, top_token_relationships, tokenizer)
-            sentences = sentences + getDetectingDatasetTopicSentences(latent_index, top_dataset_topics, tokenizer)
-            print(f"  Got Sentences for Latent {str(latent_index+1).zfill(len(str(turing_sae_subset_layer_latent_count)))}  |  Duration: {time.time()-start_time:.2f}s                                                    ")
-
-        print("")
-        for sentence in sentences:
-            print(sentence)
+        # Process Eval Data
+        for i, layer_eval_dict in enumerate(layer_eval_data):
+            latent_index = layer_eval_dict["latent_index"]
+            latent_activation_value = layer_eval_dict["activation_value"]
+            latent_avg_activation_value = turing_sae_latent_values[layer_index][latent_index]
+            latent_activation_value_distance_from_avg = latent_activation_value - latent_avg_activation_value
+            layer_eval_data[i]["activation_distance"] = latent_activation_value_distance_from_avg
+            if latent_activation_value_distance_from_avg > 0:
+                layer_eval_data[i]["success"] = True
+            else:
+                layer_eval_data[i]["success"] = False
+        
+        # Save Eval Data
+        with open(f"./latent_data/{layer_index}/eval_results.jsonl", 'w') as f:
+            for layer_eval_dict in layer_eval_data:
+                f.write(json.dumps(layer_eval_dict) + '\n')
     
         # Clear for Next Layer
         del sae_model
