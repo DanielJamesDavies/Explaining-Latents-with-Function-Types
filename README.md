@@ -9,9 +9,6 @@ Please do not hessitate to contact me on `danieljamesdavies12@gmail.com` if you 
 To run eval.py, one only needs to download this project’s research. However, to run the entire project, all files in the links below need to be downloaded.
 Several .txt files are placed in this repo to guide the placement of downloaded files.
 
-To download the code for this research:
-https://github.com/DanielJamesDavies/Explaining-Latents-with-Function-Types
-
 To download Turing-LLM-1.0-254M:
 https://www.kaggle.com/models/danieljamesdavies/turing-llm-1.0-254m
 Then place `model_1722550239_03986.pt` in `./TuringLLM/`.
