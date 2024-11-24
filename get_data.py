@@ -135,7 +135,7 @@ def collectDataForSpecificToken(layer_top_tokens_sorted, layer_top_values_sorted
         else:
             layer_top_tokens = torch.cat((layer_top_tokens, top_tokens), dim=0)
         
-        if (latent_index+1) % 1024 == 0:
+        if (latent_index+1) % 4096 == 0:
             print(f"    Processed Latent {latent_index+1}  Duration: {time.time() - start_time:.2f}s", end="\r")
     print("")
     
@@ -192,7 +192,7 @@ def collectDataForConnectingTokens(layer_top_tokens_sorted, layer_top_values_sor
         else:
             layer_top_token_relationships = torch.cat((layer_top_token_relationships, top_token_relationships), dim=0)
         
-        if (latent_index+1) % 1024 == 0:
+        if (latent_index+1) % 4096 == 0:
             print(f"    Processed Latent {latent_index+1}  Duration: {time.time() - start_time:.2f}s", end="\r")
     print("")
     
@@ -256,7 +256,7 @@ def collectDataForDetectingDatasetTopic(layer_top_dataset_paths, folder_to_save,
         # plt.ylabel('Distance')
         # plt.show()
         
-        if (latent_index+1) % 1024 == 0:
+        if (latent_index+1) % 4096 == 0:
             print(f"    Processed Latent {latent_index+1}  Duration: {time.time() - start_time:.2f}s", end="\r")
     
     print("    Preview of Results:")
