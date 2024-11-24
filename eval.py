@@ -85,7 +85,7 @@ def evaluate_connecting_tokens(
     
 
     
-    print(f"Generated {num_positive} positive and {num_positive} negative sentences for token pair {token_pair}.")
+    print(f"Generated {num_positive} positive sentences for token pair {token_pair}.")
     
     
     all_sentences = positive_sentences
