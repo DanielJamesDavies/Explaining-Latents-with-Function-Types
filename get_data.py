@@ -262,7 +262,7 @@ def collectDataForDetectingDatasetTopic(layer_top_dataset_paths, folder_to_save,
     for i in range(8):
         print("      ", top_dataset_topics[i][:7])
     
-    with open(f"{folder_to_save}/top_dataset_topics.h5.jsonl", 'w') as f:
+    with open(f"{folder_to_save}/top_dataset_topics.jsonl", 'w') as f:
         for topics in top_dataset_topics:
             f.write(json.dumps(topics) + '\n')
             
