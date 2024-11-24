@@ -9,7 +9,7 @@ import json
 from transformers import AutoTokenizer
 from sentence_transformers import SentenceTransformer
 import scipy.cluster.hierarchy as sch
-from scipy.spatial.distance import pdist, squareform
+from scipy.spatial.distance import pdist
 import matplotlib.pyplot as plt
 
 
@@ -174,7 +174,7 @@ def collectDataForConnectingTokens(layer_top_tokens_sorted, layer_top_values_sor
         frequency_matrix = torch.zeros((unique_latent_tokens_count, unique_latent_tokens_count), dtype=torch.int8, device=device)
         
         for i, sequence in enumerate(layer_tokens):
-            if i < 16:
+            if i < 24:
                 token_mask = torch.isin(unique_latent_tokens, sequence)
                 frequency_matrix += token_mask.unsqueeze(0) & token_mask.unsqueeze(1)
             
@@ -197,7 +197,6 @@ def collectDataForConnectingTokens(layer_top_tokens_sorted, layer_top_values_sor
     print("")
     
     # Display Preview of Results
-    print(layer_top_token_relationships.shape)
     print("    Preview of Results:")
     for i in range(8):
         print("      ", [[tokenizer.decode([token]) for token in tokens if token != -1] for tokens in layer_top_token_relationships[i]])
