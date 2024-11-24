@@ -77,7 +77,7 @@ def run():
                
         # Tokenize Text
         for i, layer_eval_input in enumerate(layer_eval_data):
-            layer_eval_input["text_tokens"] = tokenizer.encode(layer_eval_input["text"])[:64]
+            layer_eval_input["text_tokens"] = tokenizer.encode(layer_eval_input["text"])[:64].tolist()
             if len(layer_eval_input["text_tokens"]) == 0:
                 print("Error. Not Tokens for input: ", layer_eval_input)
                 layer_eval_data[i] = None
@@ -103,11 +103,39 @@ def run():
                 x = activations[layer_index].to(device)
                 sae_latents, _, _ = sae_model.encode(x)
                 sae_latents = sae_latents.view(sequences_per_batch, -1, sae_dim).to(device)
-                print(sae_latents.shape)
+                print("sae_latents.shape", sae_latents.shape)
                 for i in range(sequences_per_batch):
                     latent_index = layer_eval_data[i+batch_index]["latent_index"]
-                    layer_eval_data[i+batch_index]["activation_value"] = sae_latents[latent_index].item()
-                    turing_sae_latent_values[layer_index] += torch.tensor(sae_latents[0:subset_layer_latent_count], device="cpu")
+                    text_tokens = layer_eval_data[i+batch_index]["text_tokens"]
+                    eval_data_type = layer_eval_data[i+batch_index]["type"]
+                    
+                    if eval_data_type == "top-token":
+                        # Find token
+                        token = layer_eval_data[i+batch_index]["token"]
+                        if token not in text_tokens:
+                            layer_eval_data[i+batch_index]["tokens_not_found"] = True
+                            continue
+                        token_index = text_tokens.index(token)
+                        layer_eval_data[i+batch_index]["activation_value"] = sae_latents[i][token_index][latent_index].item()
+                        
+                    elif eval_data_type == "connecting-tokens":
+                        # Find tokens and get average act
+                        tokens = layer_eval_data[i+batch_index]["tokens"]
+                        if tokens[0] not in text_tokens or tokens[1] not in text_tokens:
+                            layer_eval_data[i+batch_index]["tokens_not_found"] = True
+                            continue
+                        token_0_index = text_tokens.index(tokens[0])
+                        token_1_index = text_tokens.index(tokens[1])
+                        activation_token_0 = sae_latents[i][token_0_index][latent_index].item()
+                        activation_token_1 = sae_latents[i][token_1_index][latent_index].item()
+                        layer_eval_data[i+batch_index]["activation_value"] = (activation_token_0 + activation_token_1) / 2
+                        
+                    elif eval_data_type == "detecting-dataset-topic":
+                        # Get top value
+                        layer_eval_data[i+batch_index]["activation_value"] = max(sae_latents[i][token_index][latent_index].item() for token_index in range(64))
+                        
+                    for token_sae_latents in sae_latents[i]:
+                        turing_sae_latent_values[layer_index] += torch.tensor(token_sae_latents[0:subset_layer_latent_count], device="cpu")
                     layer_num_sequences_run += 1
             
             print(f"Processing Latents {batch_index+1}-{batch_index+sequences_per_batch+1} / {len(layer_eval_data)} ({((batch_index+1)/len(layer_eval_data))*100:.2f}%)  |  Duration: {time.time()-batch_start_time:.2f}s                      ")
