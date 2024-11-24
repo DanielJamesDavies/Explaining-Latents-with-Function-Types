@@ -9,9 +9,6 @@ import torch
 import gc
 from transformers import AutoTokenizer
 
-from TuringLLM.inference import TuringLLMForInference
-from SAE.SAE_TopK import SAE
-
 
 
 
@@ -21,7 +18,7 @@ GOODFIRE_API_KEY = os.environ.get('GOODFIRE_API_KEY')
 goodfire_client = goodfire.Client(GOODFIRE_API_KEY)
 goodfire_base_model = "meta-llama/Meta-Llama-3-8B-Instruct"
 
-turing_sae_subset_layer_latent_count = 82
+subset_layer_latent_count = 82
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
@@ -126,17 +123,10 @@ def getDetectingDatasetTopicSentences(latent_index, top_dataset_topics, tokenize
 def run():
     
     print("")
+    print("Subset Layer Latent Count: ", subset_layer_latent_count)
     
     torch.cuda.empty_cache()
     gc.collect()
-    
-    
-    
-    print("Loading Turing-LLM...")
-    max_length = 64 + 1
-    turing = TuringLLMForInference(collect_latents=True, max_length=max_length)
-    
-    sae_model = None
             
             
             
@@ -151,20 +141,8 @@ def run():
     
     
     for layer_index in range(TuringLLMConfig.n_layer):
-        if layer_index > 0:
-            break
         print("")
         print(f"Layer {layer_index+1}")
-        
-        # Load SAE
-        print("  Loading SAE...")
-        sae_model = SAE(TuringLLMConfig.n_embd, sae_dim, 128, only_encoder=True).to(device)
-        sae_model = torch.compile(sae_model)
-        sae_model.load(f"../../sparse_autoencoders/sae/sae_layer_{layer_index}.pth")
-        if layer_index == 0:
-            sae_model.k = 128 + (4 * 16)
-        else:
-            sae_model.k = 128 + (layer_index * 16)
            
         # Load Layer Data 
         print("  Loading Layer Data...")
@@ -174,30 +152,26 @@ def run():
         with h5py.File(f'./latent_data/{layer_index}/top_token_relationships.h5', 'r') as h5f:
             top_token_relationships = torch.tensor(h5f['data']).to(device)
         
-        top_dataset_topics = [None for _ in range(turing_sae_subset_layer_latent_count)]
+        top_dataset_topics = [None for _ in range(subset_layer_latent_count)]
         with open(f'./latent_data/{layer_index}/top_dataset_topics.jsonl', 'r') as f:
             for i, line in enumerate(f):
-                if i < turing_sae_subset_layer_latent_count:
+                if i < subset_layer_latent_count:
                     top_dataset_topics[i] = json.loads(line)
         
         # Get Sentences
         sentences = []
-        for latent_index in range(turing_sae_subset_layer_latent_count):
+        for latent_index in range(subset_layer_latent_count):
             start_time = time.time()
-            print(f"  Getting Sentences for Latent {str(latent_index+1).zfill(len(str(turing_sae_subset_layer_latent_count)))}", end="\r")
+            print(f"  Getting Sentences for Latent {str(latent_index+1).zfill(len(str(subset_layer_latent_count)))}", end="\r")
             sentences = sentences + getTopTokensSentences(latent_index, layer_top_tokens, top_dataset_topics, tokenizer)
             sentences = sentences + getConnectingTokensSentences(latent_index, top_token_relationships, tokenizer)
             sentences = sentences + getDetectingDatasetTopicSentences(latent_index, top_dataset_topics, tokenizer)
-            print(f"  Got Sentences for Latent {str(latent_index+1).zfill(len(str(turing_sae_subset_layer_latent_count)))}  |  Duration: {time.time()-start_time:.2f}s                                                    ")
-
-        print("")
-        for sentence in sentences:
-            print(sentence)
+            print(f"  Acquired Sentences for Latent {str(latent_index+1).zfill(len(str(subset_layer_latent_count)))}  |  Duration: {time.time()-start_time:.2f}s")
     
-        # Clear for Next Layer
-        del sae_model
-        torch.cuda.empty_cache()
-        gc.collect()
+        with open(f"./latent_data/{layer_index}/eval_inputs.jsonl", 'w') as f:
+            for sentence_dict in sentences:
+                f.write(json.dumps(sentence_dict) + '\n')
+            
         print("")
 
 
