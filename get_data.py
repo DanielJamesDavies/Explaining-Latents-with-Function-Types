@@ -5,8 +5,12 @@ import numpy as np
 import torch
 import gc
 import h5py
+import json
 from transformers import AutoTokenizer
-
+from sentence_transformers import SentenceTransformer
+import scipy.cluster.hierarchy as sch
+from scipy.spatial.distance import pdist, squareform
+import matplotlib.pyplot as plt
 
 
 
@@ -143,7 +147,7 @@ def collectDataForSpecificToken(layer_top_tokens_sorted, layer_top_values_sorted
     # Save
     print("    Saving layer_top_tokens.h5")
     with h5py.File(f"{folder_to_save}/layer_top_tokens.h5", "w") as h5_file:
-        h5_file.create_dataset("tensor", data=layer_top_tokens.cpu())
+        h5_file.create_dataset("data", data=layer_top_tokens.cpu())
             
             
             
@@ -201,7 +205,7 @@ def collectDataForConnectingTokens(layer_top_tokens_sorted, layer_top_values_sor
     # Save
     print("    Saving top_token_relationships.h5")
     with h5py.File(f"{folder_to_save}/top_token_relationships.h5", "w") as h5_file:
-        h5_file.create_dataset("tensor", data=layer_top_token_relationships.cpu())
+        h5_file.create_dataset("data", data=layer_top_token_relationships.cpu())
         
        
         
@@ -209,18 +213,59 @@ def collectDataForConnectingTokens(layer_top_tokens_sorted, layer_top_values_sor
         
 def collectDataForDetectingDatasetTopic(layer_top_dataset_paths, folder_to_save, tokenizer, dataset_paths_data):
     start_time = time.time()
-    print("layer_top_dataset_paths.shape", layer_top_dataset_paths.shape)
+    
+    text_encoder_model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
+    text_encoder_model = text_encoder_model.to(device)
+    
+    top_dataset_topics = [["None"] for _ in range(layer_top_dataset_paths.shape[0])]    
     for latent_index in range(layer_top_dataset_paths.shape[0]):
-        if latent_index < 4:
-            topics_frequencies = {}
-            for key in [item for index in layer_top_dataset_paths[latent_index] for item in dataset_paths_data[index]]:
-                if key in topics_frequencies:
-                    topics_frequencies[key] += 1
-                else:
-                    topics_frequencies[key] = 1
-            topics_sorted = sorted(topics_frequencies, key=lambda x: topics_frequencies[x], reverse=True)
-            print("topics_sorted", topics_sorted)
-            print("")
+        topics_frequencies = {}
+        for key in [item for index in layer_top_dataset_paths[latent_index] for item in dataset_paths_data[index]]:
+            if key not in topics_frequencies:
+                topics_frequencies[key] = 1
+            else:
+                topics_frequencies[key] += 1
+        topics_sorted = sorted(topics_frequencies, key=lambda x: topics_frequencies[x], reverse=True)
+        # print("topics_sorted", topics_sorted)
+        # print("")
+        sequence_embeddings = text_encoder_model.encode(topics_sorted, device=device)
+        embeddings_array = np.array(sequence_embeddings)
+        linkage_matrix = sch.linkage(embeddings_array, method='ward')
+        # plt.figure(figsize=(10, 7))
+        # dendrogram = sch.dendrogram(linkage_matrix, labels=topics_sorted)
+        
+        cluster_labels = sch.fcluster(linkage_matrix, t=2, criterion='maxclust')
+        cohesion_scores = {}
+        for cluster_id in np.unique(cluster_labels):
+            cluster_points = embeddings_array[np.where(cluster_labels == cluster_id)[0]]
+            if len(cluster_points) > 1:
+                pairwise_distances = pdist(cluster_points)
+                cohesion_scores[cluster_id] = np.mean(pairwise_distances)
+            else:
+                cohesion_scores[cluster_id] = 0
+        most_cohesive_cluster_id = min(cohesion_scores, key=cohesion_scores.get)
+        most_cohesive_cluster_indices = np.where(cluster_labels == most_cohesive_cluster_id)[0]
+        most_cohesive_cluster = [topics_sorted[i] for i in most_cohesive_cluster_indices][:16]
+        top_dataset_topics[latent_index] = [str(topic) for topic in most_cohesive_cluster]
+
+        # print("Top Dataset Topics:", most_cohesive_cluster)
+                    
+        # plt.title('Hierarchical Clustering Dendrogram')
+        # plt.xlabel('Embeddings')
+        # plt.xticks(rotation=45, ha='right')
+        # plt.ylabel('Distance')
+        # plt.show()
+        
+        if (latent_index+1) % 1024 == 0:
+            print(f"    Processed Latent {latent_index+1}  Duration: {time.time() - start_time:.2f}s", end="\r")
+    
+    print("    Preview of Results:")
+    for i in range(8):
+        print("      ", top_dataset_topics[i][:7])
+    
+    with open(f"{folder_to_save}/top_dataset_topics.h5.jsonl", 'w') as f:
+        for topics in top_dataset_topics:
+            f.write(json.dumps(topics) + '\n')
             
             
             
@@ -253,6 +298,13 @@ def run():
         tokenizer = AutoTokenizer.from_pretrained(tokenizer_model_id, use_fast=True, local_files_only=True, _fast_init=True)
     except:
         tokenizer = AutoTokenizer.from_pretrained(tokenizer_model_id, use_fast=True, _fast_init=True)
+    print("")
+        
+        
+        
+    # Get Dataset Paths Data
+    print("Getting Dataset Paths Data...")
+    dataset_paths_data = getDatasetPathsData()
     
     
     
@@ -295,10 +347,6 @@ def run():
         layer_top_values_sorted, indices = torch.sort(layer_top_values_dedup, dim=-1, descending=True)
         layer_top_tokens_sorted = torch.gather(layer_top_tokens_dedup, dim=-1, index=indices)
         
-        # Get Dataset Paths Data
-        print("  Getting Dataset Paths Data...")
-        dataset_paths_data = getDatasetPathsData()
-        
         # # Display Sorted Tokens
         # for i in range(12):
         #     print(tokenizer.batch_decode([token for token in layer_top_tokens_sorted[1][i] if token != -1]))
@@ -309,21 +357,21 @@ def run():
         # For SpecificToken()
         print("")
         print("  For SpecificToken()")
-        # collectDataForSpecificToken(layer_top_tokens_sorted, layer_top_values_sorted, folder_to_save, tokenizer)
+        collectDataForSpecificToken(layer_top_tokens_sorted, layer_top_values_sorted, folder_to_save, tokenizer)
         
         # For ConnectingTokens()
         print("")
         print("  For ConnectingTokens()")
-        # collectDataForConnectingTokens(layer_top_tokens_sorted, layer_top_values_sorted, folder_to_save, tokenizer)
-            
-        # For SpecificWord()
-        print("")
-        print("  For SpecificWord()")
+        collectDataForConnectingTokens(layer_top_tokens_sorted, layer_top_values_sorted, folder_to_save, tokenizer)
         
         # For DetectingDatasetTopic()
         print("")
         print("  For DetectingDatasetTopic()")
         collectDataForDetectingDatasetTopic(layer_top_dataset_paths, folder_to_save, tokenizer, dataset_paths_data)
+            
+        # For SpecificWord()
+        print("")
+        print("  For SpecificWord()")
         
         # For DetectingSpecificConcept()
         print("")
