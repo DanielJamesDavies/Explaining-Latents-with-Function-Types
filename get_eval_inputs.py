@@ -41,7 +41,7 @@ sae_dim = 40960
 
 def goodfire_generate(prompt: str = "", model: str = goodfire_base_model) -> str:
     response = goodfire_client.chat.completions.create(
-        messages=[{ "role": "user", "content": prompt }],
+        messages=[{ "role": "user", "content": prompt[:100] }],
         model=model,
         stream=False,
         max_completion_tokens=24,
@@ -58,7 +58,7 @@ def getTopTokensSentences(latent_index, layer_top_tokens, top_dataset_topics, to
         
     variant = goodfire.Variant(goodfire_base_model)
     for topic in latent_dataset_topics:
-        features, _ = goodfire_client.features.search(topic, model=variant, top_k=2)
+        features, _ = goodfire_client.features.search(topic[:100], model=variant, top_k=2)
         if features:
             for feature in features:
                 variant.set(feature, 0.04)

@@ -1,0 +1,570 @@
+{"latent_index": 0, "type": "top-token", "token": 359, "top_token_index": 0, "is_variant": false, "text": "The os is a type of bird."}
+{"latent_index": 0, "type": "top-token", "token": 359, "top_token_index": 0, "is_variant": true, "text": "The os is a type of bird that migrates every year."}
+{"latent_index": 0, "type": "top-token", "token": 290, "top_token_index": 1, "is_variant": false, "text": "Om, I'm ready to help!"}
+{"latent_index": 0, "type": "top-token", "token": 290, "top_token_index": 1, "is_variant": true, "text": "Om mani padme hum, a sacred mantra often chanted in Buddhism."}
+{"latent_index": 0, "type": "connecting-tokens", "tokens": [267, 359], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 0, "type": "connecting-tokens", "tokens": [290, 359], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 0, "type": "detecting-dataset-topic", "topics": ["Biology", "Microbiology", "Ribosomes", "Cell Biology", "Genetics", "Biochemistry"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 1, "type": "top-token", "token": 7959, "top_token_index": 0, "is_variant": false, "text": "The static noise on the radio made it hard to hear the news."}
+{"latent_index": 1, "type": "top-token", "token": 7959, "top_token_index": 0, "is_variant": true, "text": "static silence filled the air"}
+{"latent_index": 1, "type": "top-token", "token": 29879, "top_token_index": 1, "is_variant": false, "text": "s"}
+{"latent_index": 1, "type": "top-token", "token": 29879, "top_token_index": 1, "is_variant": true, "text": "s"}
+{"latent_index": 1, "type": "connecting-tokens", "tokens": [358, 9063], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 1, "type": "connecting-tokens", "tokens": [284, 663], "connecting_tokens_index": 1, "text": "The sun is shining brightly today."}
+{"latent_index": 1, "type": "detecting-dataset-topic", "topics": ["Chemistry", "Physics", "Atomic Physics", "Atomic Structure", "Inorganic Chemistry", "Analytical Chemistry"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 2, "type": "top-token", "token": 20842, "top_token_index": 0, "is_variant": false, "text": "A composite material is a substance made from two or more different materials."}
+{"latent_index": 2, "type": "top-token", "token": 20842, "top_token_index": 0, "is_variant": true, "text": "A composite material is a substance made from two or more different materials."}
+{"latent_index": 2, "type": "top-token", "token": 324, "top_token_index": 1, "is_variant": false, "text": "It's gonna be a \"hot ol' summer\" this year, I can tell!"}
+{"latent_index": 2, "type": "top-token", "token": 324, "top_token_index": 1, "is_variant": true, "text": "It's gonna be a \"cool ol\" summer!"}
+{"latent_index": 2, "type": "connecting-tokens", "tokens": [310, 20842], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 2, "type": "connecting-tokens", "tokens": [310, 6019], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 2, "type": "detecting-dataset-topic", "topics": ["Chemistry", "Engineering", "Materials Science", "Composites", "Number Theory", "Composite numbers"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 3, "type": "top-token", "token": 5731, "top_token_index": 0, "is_variant": false, "text": "The farmer had to rot the old vegetables in the field."}
+{"latent_index": 3, "type": "top-token", "token": 5731, "top_token_index": 0, "is_variant": true, "text": "The farmer had to rot the old vegetables in the field."}
+{"latent_index": 3, "type": "top-token", "token": 9664, "top_token_index": 1, "is_variant": false, "text": "The farmer had to rot the old vegetables in the field."}
+{"latent_index": 3, "type": "top-token", "token": 9664, "top_token_index": 1, "is_variant": true, "text": "The rot had set in at the old, decaying tree trunk."}
+{"latent_index": 3, "type": "connecting-tokens", "tokens": [5731, 9664], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 3, "type": "connecting-tokens", "tokens": [5578, 5731], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 3, "type": "detecting-dataset-topic", "topics": ["Physics", "Classical Mechanics", "Rotational Motion", "Acoustics", "Ultrasonic Frequencies", "Moment of Inertia"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 4, "type": "top-token", "token": 3068, "top_token_index": 0, "is_variant": false, "text": "Can you tell me a fun fact?"}
+{"latent_index": 4, "type": "top-token", "token": 3068, "top_token_index": 0, "is_variant": true, "text": "Can you tell me a fun fact?"}
+{"latent_index": 4, "type": "top-token", "token": 26004, "top_token_index": 1, "is_variant": false, "text": "The canoe glided smoothly across the calm lake."}
+{"latent_index": 4, "type": "top-token", "token": 26004, "top_token_index": 1, "is_variant": true, "text": "The canoe glided smoothly across the calm lake."}
+{"latent_index": 4, "type": "connecting-tokens", "tokens": [3068, 26004], "connecting_tokens_index": 0, "text": "The sun is shining brightly today."}
+{"latent_index": 4, "type": "connecting-tokens", "tokens": [3068, 6354], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 4, "type": "detecting-dataset-topic", "topics": ["Geography", "Geomorphology", "Volcanic activity", "Geology", "Volcanology", "Physical Geography"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 5, "type": "top-token", "token": 322, "top_token_index": 0, "is_variant": false, "text": "The sun is shining brightly and warmly today."}
+{"latent_index": 5, "type": "top-token", "token": 322, "top_token_index": 0, "is_variant": true, "text": "The sun rises and sets beautifully over the ocean."}
+{"latent_index": 5, "type": "top-token", "token": 29892, "top_token_index": 1, "is_variant": false, "text": "short sentence."}
+{"latent_index": 5, "type": "top-token", "token": 29892, "top_token_index": 1, "is_variant": true, "text": "Short sentence."}
+{"latent_index": 5, "type": "connecting-tokens", "tokens": [278, 322], "connecting_tokens_index": 0, "text": "The sun is shining brightly today."}
+{"latent_index": 5, "type": "connecting-tokens", "tokens": [322, 29892], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 5, "type": "detecting-dataset-topic", "topics": ["History", "Industrial Revolution", "Economics", "Geography", "Textile Industry", "Factory System"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 6, "type": "connecting-tokens", "tokens": [29889, 29892], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 6, "type": "connecting-tokens", "tokens": [363, 467], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 6, "type": "detecting-dataset-topic", "topics": ["subjects", "Communication", "Music", "textbooks", "Art", "Culinary Arts"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 7, "type": "top-token", "token": 7101, "top_token_index": 0, "is_variant": false, "text": "The team worked tirelessly to reach the surface of the project."}
+{"latent_index": 7, "type": "top-token", "token": 7101, "top_token_index": 0, "is_variant": true, "text": "The water's surface was calm and peaceful."}
+{"latent_index": 7, "type": "top-token", "token": 2161, "top_token_index": 1, "is_variant": false, "text": "The mirror reflected her face."}
+{"latent_index": 7, "type": "top-token", "token": 2161, "top_token_index": 1, "is_variant": true, "text": "The mirror reflected her beautiful face."}
+{"latent_index": 7, "type": "connecting-tokens", "tokens": [2161, 7101], "connecting_tokens_index": 0, "text": "The sun is shining brightly today."}
+{"latent_index": 7, "type": "connecting-tokens", "tokens": [7101, 28001], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 7, "type": "detecting-dataset-topic", "topics": ["Chemistry", "Materials Science", "Surface Science", "Biology", "Biochemistry", "Physical Chemistry"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 8, "type": "top-token", "token": 15409, "top_token_index": 0, "is_variant": false, "text": "The beauty of the sunset was breathtaking."}
+{"latent_index": 8, "type": "top-token", "token": 15409, "top_token_index": 0, "is_variant": true, "text": "The beauty of the sunset was breathtaking."}
+{"latent_index": 8, "type": "top-token", "token": 7492, "top_token_index": 1, "is_variant": false, "text": "Ethical principles are the foundation of a professional etic."}
+{"latent_index": 8, "type": "top-token", "token": 7492, "top_token_index": 1, "is_variant": true, "text": "The chef carefully plated the dish with an artistic etic."}
+{"latent_index": 8, "type": "connecting-tokens", "tokens": [7492, 15409], "connecting_tokens_index": 0, "text": "The sun is shining brightly today."}
+{"latent_index": 8, "type": "connecting-tokens", "tokens": [322, 7492], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 8, "type": "detecting-dataset-topic", "topics": ["Culinary Arts", "Food Presentation and Plating", "Professional Kitchen Skills", "Plating and Presentation", "Food Photography and Styling", "Menu Planning and Design"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 9, "type": "top-token", "token": 12788, "top_token_index": 0, "is_variant": false, "text": "The epic battle raged on for hours, with heroes and villains clashing in a frenzy of steel and magic"}
+{"latent_index": 9, "type": "top-token", "token": 12788, "top_token_index": 0, "is_variant": true, "text": "The epic battle raged on for hours, with heroes and villains clashing in a frenzy of steel and magic"}
+{"latent_index": 9, "type": "top-token", "token": 3192, "top_token_index": 1, "is_variant": false, "text": "The sun was setting over the ged mountains, casting a warm orange glow over the landscape."}
+{"latent_index": 9, "type": "top-token", "token": 3192, "top_token_index": 1, "is_variant": true, "text": "The sun was setting over the ged of the ocean."}
+{"latent_index": 9, "type": "connecting-tokens", "tokens": [908, 3192], "connecting_tokens_index": 0, "text": "The sun is shining brightly today."}
+{"latent_index": 9, "type": "connecting-tokens", "tokens": [348, 12788], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 9, "type": "detecting-dataset-topic", "topics": ["Art", "Art Techniques", "Music", "Creative Writing", "Textile Arts", "Art History"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 10, "type": "top-token", "token": 355, "top_token_index": 0, "is_variant": false, "text": "The sun sets at the end of the day."}
+{"latent_index": 10, "type": "top-token", "token": 355, "top_token_index": 0, "is_variant": true, "text": "The sun sets at the end of the day."}
+{"latent_index": 10, "type": "top-token", "token": 964, "top_token_index": 1, "is_variant": false, "text": "I'm excited to help you with your requests, and I'll do my best to get us into a productive"}
+{"latent_index": 10, "type": "top-token", "token": 964, "top_token_index": 1, "is_variant": true, "text": "I'm excited to help you with your requests!"}
+{"latent_index": 10, "type": "connecting-tokens", "tokens": [355, 964], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 10, "type": "connecting-tokens", "tokens": [284, 561], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 10, "type": "detecting-dataset-topic", "topics": ["Biology", "Immunology", "Dendritic cells", "Physiology", "Neuroendocrine integration", "Dendritic Polymers"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 11, "type": "top-token", "token": 29892, "top_token_index": 0, "is_variant": false, "text": "short sentence."}
+{"latent_index": 11, "type": "top-token", "token": 29892, "top_token_index": 0, "is_variant": true, "text": "Short sentence."}
+{"latent_index": 11, "type": "top-token", "token": 322, "top_token_index": 1, "is_variant": false, "text": "The sun rises and sets beautifully over the ocean."}
+{"latent_index": 11, "type": "top-token", "token": 322, "top_token_index": 1, "is_variant": true, "text": "The sun rises and sets daily."}
+{"latent_index": 11, "type": "connecting-tokens", "tokens": [322, 29892], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 11, "type": "connecting-tokens", "tokens": [470, 29892], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 11, "type": "detecting-dataset-topic", "topics": ["Business", "Economics", "Human Resources", "Employee Wellness Programs", "Risk Management", "Microeconomics"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 12, "type": "top-token", "token": 1653, "top_token_index": 0, "is_variant": false, "text": "Create a new story."}
+{"latent_index": 12, "type": "top-token", "token": 1653, "top_token_index": 0, "is_variant": true, "text": "Create a new story."}
+{"latent_index": 12, "type": "top-token", "token": 25554, "top_token_index": 1, "is_variant": false, "text": "The artist spent hours honing her craft, perfecting the delicate brushstrokes on her latest painting."}
+{"latent_index": 12, "type": "top-token", "token": 25554, "top_token_index": 1, "is_variant": true, "text": "The artist spent hours honing her craft, perfecting the delicate brushstrokes on her latest painting."}
+{"latent_index": 12, "type": "connecting-tokens", "tokens": [508, 1653], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 12, "type": "connecting-tokens", "tokens": [292, 1653], "connecting_tokens_index": 1, "text": "The sun is shining brightly today."}
+{"latent_index": 12, "type": "detecting-dataset-topic", "topics": ["Creative Writing", "Show, Don't Tell", "Descriptive Writing", "Pacing and Timing", "Writing Prompts", "Resolution through Deception"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 13, "type": "top-token", "token": 5541, "top_token_index": 0, "is_variant": false, "text": "The composer carefully notated the harmonious compos of the symphony."}
+{"latent_index": 13, "type": "top-token", "token": 5541, "top_token_index": 0, "is_variant": true, "text": "The composer carefully notated the harmonious compos of the symphony."}
+{"latent_index": 13, "type": "top-token", "token": 24497, "top_token_index": 1, "is_variant": false, "text": "Compos composers create complex compositions."}
+{"latent_index": 13, "type": "top-token", "token": 24497, "top_token_index": 1, "is_variant": true, "text": "Compos composers create compos compositions."}
+{"latent_index": 13, "type": "connecting-tokens", "tokens": [5541, 24497], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 13, "type": "connecting-tokens", "tokens": [5541, 12990], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 13, "type": "detecting-dataset-topic", "topics": ["Music", "Music Theory", "Composition", "Musicology", "Music Festivals", "Festival Staff and Volunteers"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 14, "type": "top-token", "token": 1347, "top_token_index": 0, "is_variant": false, "text": "string"}
+{"latent_index": 14, "type": "top-token", "token": 1347, "top_token_index": 0, "is_variant": true, "text": "string"}
+{"latent_index": 14, "type": "top-token", "token": 1714, "top_token_index": 1, "is_variant": false, "text": "String"}
+{"latent_index": 14, "type": "top-token", "token": 1714, "top_token_index": 1, "is_variant": true, "text": "String"}
+{"latent_index": 14, "type": "connecting-tokens", "tokens": [1347, 1714], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 14, "type": "connecting-tokens", "tokens": [1347, 1807], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 14, "type": "detecting-dataset-topic", "topics": ["Art", "Art Techniques", "Music", "Instruments", "Bowed Instruments", "Keyboard Instruments"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 15, "type": "top-token", "token": 15171, "top_token_index": 0, "is_variant": false, "text": "The compreh of the novel was difficult to grasp due to the complex plot."}
+{"latent_index": 15, "type": "top-token", "token": 15171, "top_token_index": 0, "is_variant": true, "text": "The compreh of the novel was difficult to grasp due to the complex plot."}
+{"latent_index": 15, "type": "top-token", "token": 355, "top_token_index": 1, "is_variant": false, "text": "The sun sets at the end of the day."}
+{"latent_index": 15, "type": "top-token", "token": 355, "top_token_index": 1, "is_variant": true, "text": "The sun sets at the end of another beautiful day."}
+{"latent_index": 15, "type": "connecting-tokens", "tokens": [355, 15171], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 15, "type": "connecting-tokens", "tokens": [355, 3033], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 15, "type": "detecting-dataset-topic", "topics": ["Languages", "English", "Natural Language Processing", "Historical Linguistics", "Language and technology", "Syntax"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 16, "type": "top-token", "token": 6664, "top_token_index": 0, "is_variant": false, "text": "The new rev of the car was incredibly fast."}
+{"latent_index": 16, "type": "top-token", "token": 6664, "top_token_index": 0, "is_variant": true, "text": "The new rev of the car was incredibly fast."}
+{"latent_index": 16, "type": "top-token", "token": 11459, "top_token_index": 1, "is_variant": false, "text": "The Rev. Johnson delivered a powerful sermon on Sunday morning."}
+{"latent_index": 16, "type": "top-token", "token": 11459, "top_token_index": 1, "is_variant": true, "text": "The Rev. Johnson delivered a powerful sermon at the church."}
+{"latent_index": 16, "type": "connecting-tokens", "tokens": [6664, 11459], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 16, "type": "connecting-tokens", "tokens": [2410, 6664], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 16, "type": "detecting-dataset-topic", "topics": ["Languages", "Language Revitalization", "Sociolinguistics", "Bilingualism and Multilingualism", "Language Structures", "Historical Linguistics"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 17, "type": "top-token", "token": 322, "top_token_index": 0, "is_variant": false, "text": "The sun is shining brightly and warmly today."}
+{"latent_index": 17, "type": "top-token", "token": 322, "top_token_index": 0, "is_variant": true, "text": "The sun is shining brightly and warmly today."}
+{"latent_index": 17, "type": "top-token", "token": 29892, "top_token_index": 1, "is_variant": false, "text": "short sentence."}
+{"latent_index": 17, "type": "top-token", "token": 29892, "top_token_index": 1, "is_variant": true, "text": "short sentence."}
+{"latent_index": 17, "type": "connecting-tokens", "tokens": [322, 29892], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 17, "type": "connecting-tokens", "tokens": [322, 1691], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 17, "type": "detecting-dataset-topic", "topics": ["Economics", "Welfare Economics", "Public Economics", "International Economics", "Government Intervention", "Taxation"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 18, "type": "top-token", "token": 350, "top_token_index": 0, "is_variant": false, "text": "Bright and early!\n\nSentence: Beautiful mornings start with a smile."}
+{"latent_index": 18, "type": "top-token", "token": 350, "top_token_index": 0, "is_variant": true, "text": "Bright and early! Sentence: Beautiful mornings start with a smile."}
+{"latent_index": 18, "type": "top-token", "token": 29889, "top_token_index": 1, "is_variant": false, "text": "."}
+{"latent_index": 18, "type": "top-token", "token": 29889, "top_token_index": 1, "is_variant": true, "text": "."}
+{"latent_index": 18, "type": "connecting-tokens", "tokens": [350, 29889], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 18, "type": "connecting-tokens", "tokens": [29889, 29907], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 18, "type": "detecting-dataset-topic", "topics": ["Ancient Civilizations", "Geography", "Human Geography", "Ancient Elam", "Ancient Maya", "Historical Geography"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 19, "type": "top-token", "token": 277, "top_token_index": 0, "is_variant": false, "text": "It's a beautiful day outside."}
+{"latent_index": 19, "type": "top-token", "token": 277, "top_token_index": 0, "is_variant": true, "text": "It's a beautiful day outside."}
+{"latent_index": 19, "type": "top-token", "token": 290, "top_token_index": 1, "is_variant": false, "text": "Om, I'm ready to help!"}
+{"latent_index": 19, "type": "top-token", "token": 290, "top_token_index": 1, "is_variant": true, "text": "Om sweet om, the sun is shining brightly today!"}
+{"latent_index": 19, "type": "connecting-tokens", "tokens": [277, 290], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 19, "type": "connecting-tokens", "tokens": [290, 1891], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 19, "type": "detecting-dataset-topic", "topics": ["Art", "Music", "Art History", "Culinary Arts", "Art Theory", "History of Music"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 20, "type": "top-token", "token": 2242, "top_token_index": 0, "is_variant": false, "text": "The cel orchestra played a beautiful melody."}
+{"latent_index": 20, "type": "top-token", "token": 2242, "top_token_index": 0, "is_variant": true, "text": "The cel is a small, enclosed space in a movie or television production studio where the camera, lighting, and"}
+{"latent_index": 20, "type": "top-token", "token": 28555, "top_token_index": 1, "is_variant": false, "text": "Reyn's bright blue eyes sparkled with excitement"}
+{"latent_index": 20, "type": "top-token", "token": 28555, "top_token_index": 1, "is_variant": true, "text": "Reyn's ride was ruined by the rainy road."}
+{"latent_index": 20, "type": "connecting-tokens", "tokens": [264, 15225], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 20, "type": "connecting-tokens", "tokens": [264, 6498], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 20, "type": "detecting-dataset-topic", "topics": ["History", "Languages", "Economic History", "Language Structures", "Bilingualism", "Renaissance and Reformation"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 21, "type": "top-token", "token": 761, "top_token_index": 0, "is_variant": false, "text": "The mischievous elf played tricks on the children all night."}
+{"latent_index": 21, "type": "top-token", "token": 761, "top_token_index": 0, "is_variant": true, "text": "The mischievous elf played tricks on the children until the sun went down."}
+{"latent_index": 21, "type": "top-token", "token": 562, "top_token_index": 1, "is_variant": false, "text": "The acrobatics acrobats acrobatically aced the acrobatic act."}
+{"latent_index": 21, "type": "top-token", "token": 562, "top_token_index": 1, "is_variant": true, "text": "The ac company sent ac technicians to fix the broken ac unit."}
+{"latent_index": 21, "type": "connecting-tokens", "tokens": [267, 537], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 21, "type": "connecting-tokens", "tokens": [267, 403], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 21, "type": "detecting-dataset-topic", "topics": ["Economics", "Welfare Economics", "Social Welfare Function", "Public Economics", "Social Welfare Optimization", "Microeconomics"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 22, "type": "top-token", "token": 8141, "top_token_index": 0, "is_variant": false, "text": "The atr of the museum was filled with the sweet scent of blooming flowers."}
+{"latent_index": 22, "type": "top-token", "token": 8141, "top_token_index": 0, "is_variant": true, "text": "The atr of the museum was filled with the sweet scent of blooming flowers."}
+{"latent_index": 22, "type": "top-token", "token": 385, "top_token_index": 1, "is_variant": false, "text": "An elephant is a large animal."}
+{"latent_index": 22, "type": "top-token", "token": 385, "top_token_index": 1, "is_variant": true, "text": "An elephant wandered through the jungle."}
+{"latent_index": 22, "type": "connecting-tokens", "tokens": [936, 8141], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 22, "type": "connecting-tokens", "tokens": [385, 8678], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 22, "type": "detecting-dataset-topic", "topics": ["Art", "Performing Arts", "Theatrical Performance", "Music", "short_stories", "Drama"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 23, "type": "top-token", "token": 1048, "top_token_index": 0, "is_variant": false, "text": "The new employee was excited to learn about the company culture."}
+{"latent_index": 23, "type": "top-token", "token": 1048, "top_token_index": 0, "is_variant": true, "text": "The new policy is about to take effect, so we should review it carefully."}
+{"latent_index": 23, "type": "top-token", "token": 310, "top_token_index": 1, "is_variant": false, "text": "The sun rises of the horizon."}
+{"latent_index": 23, "type": "top-token", "token": 310, "top_token_index": 1, "is_variant": true, "text": "The sun rises of the horizon."}
+{"latent_index": 23, "type": "connecting-tokens", "tokens": [310, 1048], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 23, "type": "connecting-tokens", "tokens": [278, 1048], "connecting_tokens_index": 1, "text": "The sun is shining brightly today."}
+{"latent_index": 23, "type": "detecting-dataset-topic", "topics": ["Philosophy", "Physics", "Mathematics", "Analytic Philosophy", "Metaphysics", "Mathematical Philosophy"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 24, "type": "top-token", "token": 29892, "top_token_index": 0, "is_variant": false, "text": "short sentence."}
+{"latent_index": 24, "type": "top-token", "token": 29892, "top_token_index": 0, "is_variant": true, "text": "Short and sweet!"}
+{"latent_index": 24, "type": "top-token", "token": 278, "top_token_index": 1, "is_variant": false, "text": "The sun is shining brightly today."}
+{"latent_index": 24, "type": "top-token", "token": 278, "top_token_index": 1, "is_variant": true, "text": "The sun is shining brightly today."}
+{"latent_index": 24, "type": "connecting-tokens", "tokens": [2982, 25379], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 24, "type": "connecting-tokens", "tokens": [267, 11322], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 24, "type": "detecting-dataset-topic", "topics": ["subjects", "History", "Communication", "Philosophy", "textbooks", "Business"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 25, "type": "top-token", "token": 988, "top_token_index": 0, "is_variant": false, "text": "Where did you go to school?"}
+{"latent_index": 25, "type": "top-token", "token": 988, "top_token_index": 0, "is_variant": true, "text": "Where did you go to school?"}
+{"latent_index": 25, "type": "top-token", "token": 1653, "top_token_index": 1, "is_variant": false, "text": "Create a new story."}
+{"latent_index": 25, "type": "top-token", "token": 1653, "top_token_index": 1, "is_variant": true, "text": "Create a new story"}
+{"latent_index": 25, "type": "connecting-tokens", "tokens": [988, 1653], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 25, "type": "connecting-tokens", "tokens": [304, 988], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 25, "type": "detecting-dataset-topic", "topics": ["Art", "Music", "Visual Arts", "Culinary Arts", "Performing Arts", "Folk Dance"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 26, "type": "top-token", "token": 14895, "top_token_index": 0, "is_variant": false, "text": "The yoga instructor led the class through a series of challenging poses, starting with downward-facing dogga."}
+{"latent_index": 26, "type": "top-token", "token": 14895, "top_token_index": 0, "is_variant": true, "text": "The yoga instructor led the class through a series of challenging poses, starting with downward-facing dogga."}
+{"latent_index": 26, "type": "top-token", "token": 284, "top_token_index": 1, "is_variant": false, "text": "All along the calm alley, alabaster angels aligned."}
+{"latent_index": 26, "type": "top-token", "token": 284, "top_token_index": 1, "is_variant": true, "text": "All along the alley, alight lamps awaited the arrival of the night."}
+{"latent_index": 26, "type": "connecting-tokens", "tokens": [2034, 14895], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 26, "type": "connecting-tokens", "tokens": [7018, 14895], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 26, "type": "detecting-dataset-topic", "topics": ["English", "Prepositions", "Prepositions with \"at\"", "Sentence Structure", "Conjunctive Adverb", "Parts of Speech"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 27, "type": "top-token", "token": 8401, "top_token_index": 0, "is_variant": false, "text": "The family is moving to a new house next weekend."}
+{"latent_index": 27, "type": "top-token", "token": 8401, "top_token_index": 0, "is_variant": true, "text": "The family was moving to a new house next weekend."}
+{"latent_index": 27, "type": "top-token", "token": 4337, "top_token_index": 1, "is_variant": false, "text": "Can you move the couch to the living room?"}
+{"latent_index": 27, "type": "top-token", "token": 4337, "top_token_index": 1, "is_variant": true, "text": "The team is ready to move forward with the new project."}
+{"latent_index": 27, "type": "connecting-tokens", "tokens": [4337, 8401], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 27, "type": "connecting-tokens", "tokens": [292, 8401], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 27, "type": "detecting-dataset-topic", "topics": ["Economics", "Development Economics", "Economic History", "Economic History of Specific Regions", "International Economics", "Diffusion of Innovations Theory"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 28, "type": "top-token", "token": 9801, "top_token_index": 0, "is_variant": false, "text": "Ensure that you lock the door before leaving the house."}
+{"latent_index": 28, "type": "top-token", "token": 9801, "top_token_index": 0, "is_variant": true, "text": "Ensure that you have all the necessary ingredients before starting to cook."}
+{"latent_index": 28, "type": "top-token", "token": 393, "top_token_index": 1, "is_variant": false, "text": "That is a lovely day outside."}
+{"latent_index": 28, "type": "top-token", "token": 393, "top_token_index": 1, "is_variant": true, "text": "That's a great start!"}
+{"latent_index": 28, "type": "connecting-tokens", "tokens": [393, 9801], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 28, "type": "connecting-tokens", "tokens": [278, 9801], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 28, "type": "detecting-dataset-topic", "topics": ["Culinary Arts", "Baking and Pastry Arts", "Food Cost Control", "Food Safety and Sanitation", "Cooking Methods", "Food Preparation Techniques"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 29, "type": "top-token", "token": 391, "top_token_index": 0, "is_variant": false, "text": "The artist carefully mixed the colors on her palette."}
+{"latent_index": 29, "type": "top-token", "token": 391, "top_token_index": 0, "is_variant": true, "text": "The artist carefully mixed the colors on her palette."}
+{"latent_index": 29, "type": "top-token", "token": 2035, "top_token_index": 1, "is_variant": false, "text": "The British Airways jet landed at Heathrow airport 'iet' on schedule."}
+{"latent_index": 29, "type": "top-token", "token": 2035, "top_token_index": 1, "is_variant": true, "text": "The tiny iet bird sang a sweet melody in the morning air."}
+{"latent_index": 29, "type": "connecting-tokens", "tokens": [391, 3819], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 29, "type": "connecting-tokens", "tokens": [391, 2180], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 29, "type": "detecting-dataset-topic", "topics": ["Chemistry", "Organic Chemistry", "Organic Chemistry Fundamentals", "Acids and Bases", "ACID Properties", "Monoprotic acids"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 30, "type": "top-token", "token": 11952, "top_token_index": 0, "is_variant": false, "text": "The children played on the street."}
+{"latent_index": 30, "type": "top-token", "token": 11952, "top_token_index": 0, "is_variant": true, "text": "The aroma of freshly baked cookies wafted down the street."}
+{"latent_index": 30, "type": "top-token", "token": 366, "top_token_index": 1, "is_variant": false, "text": "You are doing a great job so far!"}
+{"latent_index": 30, "type": "top-token", "token": 366, "top_token_index": 1, "is_variant": true, "text": "Would you like to start with a refreshing glass of lemonade on a warm day?"}
+{"latent_index": 30, "type": "connecting-tokens", "tokens": [4272, 11952], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 30, "type": "connecting-tokens", "tokens": [11952, 14157], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 30, "type": "detecting-dataset-topic", "topics": ["English", "Languages", "Communication", "Culinary Arts", "International Cuisines", "Street food"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 31, "type": "top-token", "token": 278, "top_token_index": 0, "is_variant": false, "text": "The sun is shining brightly today."}
+{"latent_index": 31, "type": "top-token", "token": 278, "top_token_index": 0, "is_variant": true, "text": "The sun is shining brightly in the sky."}
+{"latent_index": 31, "type": "top-token", "token": 1552, "top_token_index": 1, "is_variant": false, "text": "The sun is shining brightly today."}
+{"latent_index": 31, "type": "top-token", "token": 1552, "top_token_index": 1, "is_variant": true, "text": "The sun is shining brightly in the sky."}
+{"latent_index": 31, "type": "connecting-tokens", "tokens": [278, 450], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 31, "type": "connecting-tokens", "tokens": [278, 408], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 31, "type": "detecting-dataset-topic", "topics": ["Biology", "Anatomy", "Chemistry", "Biochemistry", "Physiology", "Botany"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 32, "type": "top-token", "token": 29892, "top_token_index": 0, "is_variant": false, "text": "short sentence."}
+{"latent_index": 32, "type": "top-token", "token": 29892, "top_token_index": 0, "is_variant": true, "text": "Short sentence."}
+{"latent_index": 32, "type": "top-token", "token": 470, "top_token_index": 1, "is_variant": false, "text": "Would you like to explore the world or stay in your cozy bed?"}
+{"latent_index": 32, "type": "top-token", "token": 470, "top_token_index": 1, "is_variant": true, "text": "Would you like to play a game or learn something new?"}
+{"latent_index": 32, "type": "connecting-tokens", "tokens": [470, 29892], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 32, "type": "connecting-tokens", "tokens": [408, 29892], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 32, "type": "detecting-dataset-topic", "topics": ["Business", "Computer Science", "Engineering", "Information Technology", "Risk Management", "Networking"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 33, "type": "top-token", "token": 1870, "top_token_index": 0, "is_variant": false, "text": ""}
+{"latent_index": 33, "type": "top-token", "token": 1870, "top_token_index": 0, "is_variant": true, "text": "The null hypothesis was rejected."}
+{"latent_index": 33, "type": "top-token", "token": 5167, "top_token_index": 1, "is_variant": false, "text": "Type Sentence:"}
+{"latent_index": 33, "type": "top-token", "token": 5167, "top_token_index": 1, "is_variant": true, "text": "Type"}
+{"latent_index": 33, "type": "connecting-tokens", "tokens": [1870, 5167], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 33, "type": "connecting-tokens", "tokens": [5167, 20051], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 33, "type": "detecting-dataset-topic", "topics": ["Music", "Music Production", "Songwriting", "Art", "Art Movements", "Impressionism"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 34, "type": "top-token", "token": 4223, "top_token_index": 0, "is_variant": false, "text": "The English language is widely spoken around the world."}
+{"latent_index": 34, "type": "top-token", "token": 4223, "top_token_index": 0, "is_variant": true, "text": "The English language is widely spoken around the world."}
+{"latent_index": 34, "type": "top-token", "token": 25437, "top_token_index": 1, "is_variant": false, "text": "sentence"}
+{"latent_index": 34, "type": "top-token", "token": 25437, "top_token_index": 1, "is_variant": true, "text": "sentence"}
+{"latent_index": 34, "type": "connecting-tokens", "tokens": [4223, 25437], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 34, "type": "connecting-tokens", "tokens": [4223, 29892], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 34, "type": "detecting-dataset-topic", "topics": ["Sentence Structure", "Prepositions", "Parts of Speech", "Prepositional Phrase", "Nouns", "Prepositions with \"for\""], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 35, "type": "top-token", "token": 2610, "top_token_index": 0, "is_variant": false, "text": "May the sunshine brighten your day!"}
+{"latent_index": 35, "type": "top-token", "token": 2610, "top_token_index": 0, "is_variant": true, "text": "May the sunshine brighten up your day!"}
+{"latent_index": 35, "type": "top-token", "token": 29482, "top_token_index": 1, "is_variant": false, "text": "The city is hosting a grand festiv celebration in the town square."}
+{"latent_index": 35, "type": "top-token", "token": 29482, "top_token_index": 1, "is_variant": true, "text": "The city is hosting a fun-filled festiv weekend with live music and food stalls."}
+{"latent_index": 35, "type": "connecting-tokens", "tokens": [841, 29482], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 35, "type": "connecting-tokens", "tokens": [2610, 5306], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 35, "type": "detecting-dataset-topic", "topics": ["Music", "Music Festivals", "Music Festivals and Culture", "Music Genres", "Post-Festival Feedback Collection", "Music Festival Audience Demographics"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 36, "type": "top-token", "token": 645, "top_token_index": 0, "is_variant": false, "text": "I'll meet you at the park 'll be there at 5!"}
+{"latent_index": 36, "type": "top-token", "token": 645, "top_token_index": 0, "is_variant": true, "text": "I'm gonna head out to the store 'll be back soon."}
+{"latent_index": 36, "type": "top-token", "token": 1111, "top_token_index": 1, "is_variant": false, "text": "The new co-working space in town is really cool."}
+{"latent_index": 36, "type": "top-token", "token": 1111, "top_token_index": 1, "is_variant": true, "text": "The sun is setting co-coasionally over the horizon."}
+{"latent_index": 36, "type": "connecting-tokens", "tokens": [519, 645], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 36, "type": "connecting-tokens", "tokens": [265, 645], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 36, "type": "detecting-dataset-topic", "topics": ["subjects", "Spelling", "Orthography", "Writing Systems", "Economics", "Welfare Economics"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 37, "type": "top-token", "token": 1455, "top_token_index": 0, "is_variant": false, "text": "The hotel's reservation cial department was very helpful."}
+{"latent_index": 37, "type": "top-token", "token": 1455, "top_token_index": 0, "is_variant": true, "text": "The commercial was quite cinematic, capturing the vast, civilizational complexities of the city."}
+{"latent_index": 37, "type": "top-token", "token": 18853, "top_token_index": 1, "is_variant": false, "text": "an understanding of the essential concepts is crucial for success."}
+{"latent_index": 37, "type": "top-token", "token": 18853, "top_token_index": 1, "is_variant": true, "text": "and this essential information is crucial to understand the topic."}
+{"latent_index": 37, "type": "connecting-tokens", "tokens": [1455, 7618], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 37, "type": "connecting-tokens", "tokens": [7618, 18853], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 37, "type": "detecting-dataset-topic", "topics": ["Chemistry", "Engineering", "Computer Science", "Redox Reactions", "Organic Chemistry", "Materials Science and Engineering"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 38, "type": "top-token", "token": 310, "top_token_index": 0, "is_variant": false, "text": "The sun rises of the horizon."}
+{"latent_index": 38, "type": "top-token", "token": 310, "top_token_index": 0, "is_variant": true, "text": "The sun rises of the horizon."}
+{"latent_index": 38, "type": "top-token", "token": 9593, "top_token_index": 1, "is_variant": false, "text": "The politician's decision to nominate a candidate was deliberate and calculated to satisfy the electorate."}
+{"latent_index": 38, "type": "top-token", "token": 9593, "top_token_index": 1, "is_variant": true, "text": "The new policy will necessitate a significant reorganicate of our department's workflow."}
+{"latent_index": 38, "type": "connecting-tokens", "tokens": [278, 310], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 38, "type": "connecting-tokens", "tokens": [310, 9593], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 38, "type": "detecting-dataset-topic", "topics": ["Economics", "public_figures", "International Economics", "Economic Policy", "Labor Economics", "Labor Market Equilibrium"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 39, "type": "top-token", "token": 5722, "top_token_index": 0, "is_variant": false, "text": "The new techn features of the smartphone are really impressive."}
+{"latent_index": 39, "type": "top-token", "token": 5722, "top_token_index": 0, "is_variant": true, "text": "The new techn advancements have revolutionized the way we communicate."}
+{"latent_index": 39, "type": "top-token", "token": 5996, "top_token_index": 1, "is_variant": false, "text": "a geological surveyor carefully examined the rocky terrain"}
+{"latent_index": 39, "type": "top-token", "token": 5996, "top_token_index": 1, "is_variant": true, "text": "a biological experiment gone wrong!"}
+{"latent_index": 39, "type": "connecting-tokens", "tokens": [5722, 11763], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 39, "type": "connecting-tokens", "tokens": [5722, 5996], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 39, "type": "detecting-dataset-topic", "topics": ["Engineering", "Economics", "Energy Engineering", "Supply Chain Management", "Chemistry", "Computer Science"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 40, "type": "top-token", "token": 470, "top_token_index": 0, "is_variant": false, "text": "Would you like to explore the world or stay in your cozy bed?"}
+{"latent_index": 40, "type": "top-token", "token": 470, "top_token_index": 0, "is_variant": true, "text": "Would you like to know the meaning of the word \"or\"?"}
+{"latent_index": 40, "type": "top-token", "token": 322, "top_token_index": 1, "is_variant": false, "text": "The sun is shining brightly and warmly today."}
+{"latent_index": 40, "type": "top-token", "token": 322, "top_token_index": 1, "is_variant": true, "text": "It's a beautiful day and the sun is shining brightly."}
+{"latent_index": 40, "type": "connecting-tokens", "tokens": [470, 2086], "connecting_tokens_index": 0, "text": "The sun is shining brightly today."}
+{"latent_index": 40, "type": "connecting-tokens", "tokens": [322, 2086], "connecting_tokens_index": 1, "text": "The sun is shining brightly today."}
+{"latent_index": 40, "type": "detecting-dataset-topic", "topics": ["Communication", "Creative Writing", "English", "Languages", "Public Speaking", "Verbal Communication"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 41, "type": "top-token", "token": 20612, "top_token_index": 0, "is_variant": false, "text": "The new camera takes stunning photos."}
+{"latent_index": 41, "type": "top-token", "token": 20612, "top_token_index": 0, "is_variant": true, "text": "The photographer took stunning photos of the sunset."}
+{"latent_index": 41, "type": "top-token", "token": 15788, "top_token_index": 1, "is_variant": false, "text": "The otos in the aquarium were swimming around the coral."}
+{"latent_index": 41, "type": "top-token", "token": 15788, "top_token_index": 1, "is_variant": true, "text": "The otos in the aquarium were swimming around the coral."}
+{"latent_index": 41, "type": "connecting-tokens", "tokens": [15788, 20612], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 41, "type": "connecting-tokens", "tokens": [10805, 20612], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 41, "type": "detecting-dataset-topic", "topics": ["Biology", "Photosynthesis", "Biochemistry", "Chemistry", "Botany", "Light Reactions"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 42, "type": "top-token", "token": 3049, "top_token_index": 0, "is_variant": false, "text": "Chinese food is chn amazing!"}
+{"latent_index": 42, "type": "top-token", "token": 3049, "top_token_index": 0, "is_variant": true, "text": "The chicken chomped on the crunchy chenopodium."}
+{"latent_index": 42, "type": "top-token", "token": 866, "top_token_index": 1, "is_variant": false, "text": "Note to self: Don't forget to pick up milk at the store!"}
+{"latent_index": 42, "type": "top-token", "token": 866, "top_token_index": 1, "is_variant": true, "text": "Note to self: Don't forget to buy milk!"}
+{"latent_index": 42, "type": "connecting-tokens", "tokens": [866, 3049], "connecting_tokens_index": 0, "text": "The sun is shining brightly today."}
+{"latent_index": 42, "type": "connecting-tokens", "tokens": [866, 3002], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 42, "type": "detecting-dataset-topic", "topics": ["Biology", "Biotechnology", "Agricultural Biotechnology", "Plant Biotechnology", "Botany", "Microbial Biotechnology"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 43, "type": "top-token", "token": 25483, "top_token_index": 0, "is_variant": false, "text": "The new employee gained valuable insight into the company's operations during her first week on the job."}
+{"latent_index": 43, "type": "top-token", "token": 25483, "top_token_index": 0, "is_variant": true, "text": "The new employee gained valuable insight into the company's operations during her first week on the job."}
+{"latent_index": 43, "type": "top-token", "token": 5861, "top_token_index": 1, "is_variant": false, "text": "The city lights twinkled at night."}
+{"latent_index": 43, "type": "top-token", "token": 5861, "top_token_index": 1, "is_variant": true, "text": "The city lights twinkled at night."}
+{"latent_index": 43, "type": "connecting-tokens", "tokens": [5861, 25483], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 43, "type": "connecting-tokens", "tokens": [1663, 5861], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 43, "type": "detecting-dataset-topic", "topics": ["subjects", "Creative Writing", "Communication", "English", "Feedback Mechanisms", "Philosophy"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 44, "type": "top-token", "token": 10809, "top_token_index": 0, "is_variant": false, "text": "The scuba diver descended to a depth of 50 feet in the ocean."}
+{"latent_index": 44, "type": "top-token", "token": 10809, "top_token_index": 0, "is_variant": true, "text": "The ocean's depth is a mystery that has captivated humans for centuries."}
+{"latent_index": 44, "type": "top-token", "token": 9927, "top_token_index": 1, "is_variant": false, "text": "a new dimension of possibilities awaits us."}
+{"latent_index": 44, "type": "top-token", "token": 9927, "top_token_index": 1, "is_variant": true, "text": "In a world beyond our three-dimensional reality,"}
+{"latent_index": 44, "type": "connecting-tokens", "tokens": [9927, 10809], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 44, "type": "connecting-tokens", "tokens": [10809, 18459], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 44, "type": "detecting-dataset-topic", "topics": ["Art", "Drawing", "Art Techniques", "Hatching", "Music", "Layering"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 45, "type": "top-token", "token": 278, "top_token_index": 0, "is_variant": false, "text": "The sun is shining brightly today."}
+{"latent_index": 45, "type": "top-token", "token": 278, "top_token_index": 0, "is_variant": true, "text": "The sun is shining brightly today."}
+{"latent_index": 45, "type": "top-token", "token": 373, "top_token_index": 1, "is_variant": false, "text": "The sun is shining brightly on this beautiful day."}
+{"latent_index": 45, "type": "top-token", "token": 373, "top_token_index": 1, "is_variant": true, "text": "It's on!"}
+{"latent_index": 45, "type": "connecting-tokens", "tokens": [278, 373], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 45, "type": "connecting-tokens", "tokens": [278, 297], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 45, "type": "detecting-dataset-topic", "topics": ["Music", "Rhythm", "Music Therapy", "Music Business", "Music Festivals and Culture", "Music Festival Genres"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 46, "type": "top-token", "token": 310, "top_token_index": 0, "is_variant": false, "text": "The sun rises of the horizon."}
+{"latent_index": 46, "type": "top-token", "token": 310, "top_token_index": 0, "is_variant": true, "text": "The sun rises of the horizon."}
+{"latent_index": 46, "type": "top-token", "token": 278, "top_token_index": 1, "is_variant": false, "text": "The sun is shining brightly today."}
+{"latent_index": 46, "type": "top-token", "token": 278, "top_token_index": 1, "is_variant": true, "text": "The sun is shining brightly in the sky."}
+{"latent_index": 46, "type": "connecting-tokens", "tokens": [263, 310], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 46, "type": "connecting-tokens", "tokens": [278, 310], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 46, "type": "detecting-dataset-topic", "topics": ["Mathematics", "Mathematical Analysis", "Odds Ratio", "Taylor Series", "Calculus", "Triple integrals"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 47, "type": "top-token", "token": 5313, "top_token_index": 0, "is_variant": false, "text": "The new contract was a major uct in the company's financial performance."}
+{"latent_index": 47, "type": "top-token", "token": 5313, "top_token_index": 0, "is_variant": true, "text": "The contract was signed with auct."}
+{"latent_index": 47, "type": "top-token", "token": 29395, "top_token_index": 1, "is_variant": false, "text": "The unfurled flag waved gently in the breeze."}
+{"latent_index": 47, "type": "top-token", "token": 29395, "top_token_index": 1, "is_variant": true, "text": "The unfurled flag waved proudly in the wind."}
+{"latent_index": 47, "type": "connecting-tokens", "tokens": [5313, 13917], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 47, "type": "connecting-tokens", "tokens": [3097, 29190], "connecting_tokens_index": 1, "text": "The sun is shining brightly today."}
+{"latent_index": 47, "type": "detecting-dataset-topic", "topics": ["Economics", "Welfare Economics", "public_figures", "Business", "Law and Economics", "Regulation and Deregulation"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 48, "type": "top-token", "token": 300, "top_token_index": 0, "is_variant": false, "text": "The sun et al. shone brightly in the sky."}
+{"latent_index": 48, "type": "top-token", "token": 300, "top_token_index": 0, "is_variant": true, "text": "The et al. team worked tirelessly to meet the deadline."}
+{"latent_index": 48, "type": "top-token", "token": 1526, "top_token_index": 1, "is_variant": false, "text": "The musicians played mp3 files on their mp3 players."}
+{"latent_index": 48, "type": "top-token", "token": 1526, "top_token_index": 1, "is_variant": true, "text": "The new mp3 player was a mp milestone in portable music technology."}
+{"latent_index": 48, "type": "connecting-tokens", "tokens": [1526, 4235], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 48, "type": "connecting-tokens", "tokens": [300, 562], "connecting_tokens_index": 1, "text": "The sun is shining brightly today."}
+{"latent_index": 48, "type": "detecting-dataset-topic", "topics": ["Geography", "Business", "Engineering", "Hydrology", "Economics", "Entrepreneurship"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 49, "type": "top-token", "token": 6763, "top_token_index": 0, "is_variant": false, "text": "a"}
+{"latent_index": 49, "type": "top-token", "token": 6763, "top_token_index": 0, "is_variant": true, "text": "a"}
+{"latent_index": 49, "type": "top-token", "token": 1369, "top_token_index": 1, "is_variant": false, "text": "It's time to start our conversation!"}
+{"latent_index": 49, "type": "top-token", "token": 1369, "top_token_index": 1, "is_variant": true, "text": "It's time to start our conversation!"}
+{"latent_index": 49, "type": "connecting-tokens", "tokens": [1369, 6763], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 49, "type": "connecting-tokens", "tokens": [5751, 6763], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 49, "type": "detecting-dataset-topic", "topics": ["Art", "Culinary Arts", "Music", "Culinary Trends and Innovations", "Artisanal and Handcrafted Foods", "Music Festivals and Culture"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 50, "type": "top-token", "token": 381, "top_token_index": 0, "is_variant": false, "text": "The sun rises ir the east."}
+{"latent_index": 50, "type": "top-token", "token": 381, "top_token_index": 0, "is_variant": true, "text": "The sun sets ir the horizon."}
+{"latent_index": 50, "type": "top-token", "token": 19866, "top_token_index": 1, "is_variant": false, "text": "I am listening"}
+{"latent_index": 50, "type": "top-token", "token": 19866, "top_token_index": 1, "is_variant": true, "text": "I'm listening"}
+{"latent_index": 50, "type": "connecting-tokens", "tokens": [381, 29871], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 50, "type": "connecting-tokens", "tokens": [381, 5769], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 50, "type": "detecting-dataset-topic", "topics": ["Listening Skills", "Active Listening", "Music", "Inclusive Listening", "Listening skills", "Emotionally Intelligent Listening"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 51, "type": "top-token", "token": 10723, "top_token_index": 0, "is_variant": false, "text": "The concept of artificial intelligence was derived from the study of human cognition and behavior."}
+{"latent_index": 51, "type": "top-token", "token": 10723, "top_token_index": 0, "is_variant": true, "text": "The concept of artificial intelligence was derived from the study of human cognition and behavior."}
+{"latent_index": 51, "type": "top-token", "token": 293, "top_token_index": 1, "is_variant": false, "text": "The icicle hung precariously from the roof."}
+{"latent_index": 51, "type": "top-token", "token": 293, "top_token_index": 1, "is_variant": true, "text": "The icicle hung precariously from the roof."}
+{"latent_index": 51, "type": "connecting-tokens", "tokens": [293, 10723], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 51, "type": "connecting-tokens", "tokens": [7625, 10723], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 51, "type": "detecting-dataset-topic", "topics": ["subjects", "textbooks", "Philosophy", "Culinary Arts", "Art", "Philosophy of Mind"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 52, "type": "top-token", "token": 561, "top_token_index": 0, "is_variant": false, "text": "The pharmacist carefully phrased the prescription to ensure accuracy."}
+{"latent_index": 52, "type": "top-token", "token": 561, "top_token_index": 0, "is_variant": true, "text": "The pharmacist carefully phrased the prescription to ensure precise pharma-ceutical accuracy."}
+{"latent_index": 52, "type": "top-token", "token": 327, "top_token_index": 1, "is_variant": false, "text": "It was a hot day at the ot-tent camp."}
+{"latent_index": 52, "type": "top-token", "token": 327, "top_token_index": 1, "is_variant": true, "text": "It was a hot day at the ot-tent camp."}
+{"latent_index": 52, "type": "connecting-tokens", "tokens": [327, 561], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 52, "type": "connecting-tokens", "tokens": [327, 22244], "connecting_tokens_index": 1, "text": "The sun is shining brightly today."}
+{"latent_index": 52, "type": "detecting-dataset-topic", "topics": ["Computer Science", "Chemistry", "Engineering", "Business", "Economics", "Electrochemistry"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 53, "type": "top-token", "token": 5146, "top_token_index": 0, "is_variant": false, "text": "Can you pay for the groceries online?"}
+{"latent_index": 53, "type": "top-token", "token": 5146, "top_token_index": 0, "is_variant": true, "text": "Can you pay attention to the details in this report?"}
+{"latent_index": 53, "type": "top-token", "token": 320, "top_token_index": 1, "is_variant": false, "text": "\\short sentence"}
+{"latent_index": 53, "type": "top-token", "token": 320, "top_token_index": 1, "is_variant": true, "text": "\\short sentence"}
+{"latent_index": 53, "type": "connecting-tokens", "tokens": [292, 5146], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 53, "type": "connecting-tokens", "tokens": [5146, 14617], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 53, "type": "detecting-dataset-topic", "topics": ["Communication", "Interpersonal Communication", "Communication Ethics", "Active listening", "Listening Skills", "Music"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 54, "type": "top-token", "token": 5996, "top_token_index": 0, "is_variant": false, "text": "a geological surveyor carefully examined the terrain"}
+{"latent_index": 54, "type": "top-token", "token": 5996, "top_token_index": 0, "is_variant": true, "text": "a geological surveyor"}
+{"latent_index": 54, "type": "top-token", "token": 1190, "top_token_index": 1, "is_variant": false, "text": "The sun rises sur the horizon."}
+{"latent_index": 54, "type": "top-token", "token": 1190, "top_token_index": 1, "is_variant": true, "text": "The sun was shining brightly sur the horizon."}
+{"latent_index": 54, "type": "connecting-tokens", "tokens": [3002, 5996], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 54, "type": "connecting-tokens", "tokens": [936, 5996], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 54, "type": "detecting-dataset-topic", "topics": ["Languages", "Morphology", "Comparative Linguistics", "Morphological Universals", "English", "Phonetics and Phonology"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 55, "type": "top-token", "token": 29889, "top_token_index": 0, "is_variant": false, "text": "."}
+{"latent_index": 55, "type": "top-token", "token": 29889, "top_token_index": 0, "is_variant": true, "text": "."}
+{"latent_index": 55, "type": "top-token", "token": 13630, "top_token_index": 1, "is_variant": false, "text": "The curious cub cautiously crept out of its cozy cubbyhole."}
+{"latent_index": 55, "type": "top-token", "token": 13630, "top_token_index": 1, "is_variant": true, "text": "The curious cub cautiously crept out of its cozy cave."}
+{"latent_index": 55, "type": "connecting-tokens", "tokens": [29889, 29895], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 55, "type": "connecting-tokens", "tokens": [4755, 29889], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 55, "type": "detecting-dataset-topic", "topics": ["subjects", "Mathematics", "short_stories", "public_figures", "Geography", "Culinary Arts"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 56, "type": "top-token", "token": 310, "top_token_index": 0, "is_variant": false, "text": "The sun rises of the horizon."}
+{"latent_index": 56, "type": "top-token", "token": 310, "top_token_index": 0, "is_variant": true, "text": "The sun rises of the horizon."}
+{"latent_index": 56, "type": "top-token", "token": 280, "top_token_index": 1, "is_variant": false, "text": "The little lemur leaped across the lea."}
+{"latent_index": 56, "type": "top-token", "token": 280, "top_token_index": 1, "is_variant": true, "text": "The little lemur leaped lightly."}
+{"latent_index": 56, "type": "connecting-tokens", "tokens": [280, 310], "connecting_tokens_index": 0, "text": "The sun is shining brightly today."}
+{"latent_index": 56, "type": "connecting-tokens", "tokens": [263, 310], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 56, "type": "detecting-dataset-topic", "topics": ["subjects", "Creative Writing", "Business", "Philosophy", "short_stories", "Mathematics"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 57, "type": "top-token", "token": 791, "top_token_index": 0, "is_variant": false, "text": "The value of kindness is invaluable."}
+{"latent_index": 57, "type": "top-token", "token": 791, "top_token_index": 0, "is_variant": true, "text": "Val is excited for the upcoming vacation."}
+{"latent_index": 57, "type": "top-token", "token": 575, "top_token_index": 1, "is_variant": false, "text": "The sun rises high in the ens of the sky."}
+{"latent_index": 57, "type": "top-token", "token": 575, "top_token_index": 1, "is_variant": true, "text": "The sun rises high in the ens of the sky."}
+{"latent_index": 57, "type": "connecting-tokens", "tokens": [278, 791], "connecting_tokens_index": 0, "text": "The sun is shining brightly today."}
+{"latent_index": 57, "type": "connecting-tokens", "tokens": [758, 791], "connecting_tokens_index": 1, "text": "The sun is shining brightly today."}
+{"latent_index": 57, "type": "detecting-dataset-topic", "topics": ["Communication", "Creative Writing", "English", "Languages", "Spelling", "Digital Communication"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 58, "type": "top-token", "token": 1565, "top_token_index": 0, "is_variant": false, "text": "The sun rises true to its promise every morning."}
+{"latent_index": 58, "type": "top-token", "token": 1565, "top_token_index": 0, "is_variant": true, "text": "The sun rises true east."}
+{"latent_index": 58, "type": "top-token", "token": 609, "top_token_index": 1, "is_variant": false, "text": "The ontologist studied the ontological nature of being."}
+{"latent_index": 58, "type": "top-token", "token": 609, "top_token_index": 1, "is_variant": true, "text": "The ontologist studied the ontological nature of being."}
+{"latent_index": 58, "type": "connecting-tokens", "tokens": [1565, 2089], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 58, "type": "connecting-tokens", "tokens": [2089, 3009], "connecting_tokens_index": 1, "text": "The sun is shining brightly today."}
+{"latent_index": 58, "type": "detecting-dataset-topic", "topics": ["Chemistry", "Thermodynamics", "Spectroscopy", "Laws of Thermodynamics", "Electrochemistry", "Equilibrium"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 59, "type": "top-token", "token": 310, "top_token_index": 0, "is_variant": false, "text": "The sun rises of the horizon."}
+{"latent_index": 59, "type": "top-token", "token": 310, "top_token_index": 0, "is_variant": true, "text": "The sun rises of the horizon."}
+{"latent_index": 59, "type": "top-token", "token": 29900, "top_token_index": 1, "is_variant": false, "text": "0"}
+{"latent_index": 59, "type": "top-token", "token": 29900, "top_token_index": 1, "is_variant": true, "text": "0"}
+{"latent_index": 59, "type": "connecting-tokens", "tokens": [310, 322], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 59, "type": "connecting-tokens", "tokens": [297, 3900], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 59, "type": "detecting-dataset-topic", "topics": ["Economics", "Business", "Culinary Arts", "Law and Economics", "Nuclear Engineering", "Biology"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 60, "type": "top-token", "token": 3097, "top_token_index": 0, "is_variant": false, "text": "The student's ability to solve complex math problems impressed the teacher."}
+{"latent_index": 60, "type": "top-token", "token": 3097, "top_token_index": 0, "is_variant": true, "text": "The company valued her exceptional ability to solve complex problems."}
+{"latent_index": 60, "type": "top-token", "token": 319, "top_token_index": 1, "is_variant": false, "text": "A great start! \n\nSentence: Amazing things are happening today!"}
+{"latent_index": 60, "type": "top-token", "token": 319, "top_token_index": 1, "is_variant": true, "text": "A great start! \n\nSentence: Amazing things await around every corner."}
+{"latent_index": 60, "type": "connecting-tokens", "tokens": [319, 3097], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 60, "type": "connecting-tokens", "tokens": [310, 3097], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 60, "type": "detecting-dataset-topic", "topics": ["Economics", "Human Resource Management", "Microeconomics", "Market Equilibrium", "Welfare Economics", "Health Economics"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 61, "type": "top-token", "token": 9979, "top_token_index": 0, "is_variant": false, "text": "The asso team worked together to achieve their goal."}
+{"latent_index": 61, "type": "top-token", "token": 9979, "top_token_index": 0, "is_variant": true, "text": "The asso of friends went on a picnic"}
+{"latent_index": 61, "type": "top-token", "token": 322, "top_token_index": 1, "is_variant": false, "text": "The sun is shining brightly and warmly today."}
+{"latent_index": 61, "type": "top-token", "token": 322, "top_token_index": 1, "is_variant": true, "text": "The sun shines brightly and warmly on a beautiful summer day."}
+{"latent_index": 61, "type": "connecting-tokens", "tokens": [3192, 11176], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 61, "type": "connecting-tokens", "tokens": [322, 29892], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 61, "type": "detecting-dataset-topic", "topics": ["Art", "Art Movements", "Art Techniques", "Music", "Art History", "Culinary Arts"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 62, "type": "top-token", "token": 3234, "top_token_index": 0, "is_variant": false, "text": "The new smartphone is a highly anticipated product in the tech industry."}
+{"latent_index": 62, "type": "top-token", "token": 3234, "top_token_index": 0, "is_variant": true, "text": "The new smartphone is a highly anticipated product in the tech industry."}
+{"latent_index": 62, "type": "top-token", "token": 7855, "top_token_index": 1, "is_variant": false, "text": "The entity was hidden in the shadows."}
+{"latent_index": 62, "type": "top-token", "token": 7855, "top_token_index": 1, "is_variant": true, "text": "The entity responsible for the project's success was the dedicated team leader."}
+{"latent_index": 62, "type": "connecting-tokens", "tokens": [2669, 3234], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 62, "type": "connecting-tokens", "tokens": [470, 5001], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 62, "type": "detecting-dataset-topic", "topics": ["Economics", "International Economics", "Welfare Economics", "Labor Economics", "Financial Instruments", "Marginal Utility"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 63, "type": "top-token", "token": 12464, "top_token_index": 0, "is_variant": false, "text": "The dog wagged its tail with excitement."}
+{"latent_index": 63, "type": "top-token", "token": 12464, "top_token_index": 0, "is_variant": true, "text": "The dog wagged its tail with excitement."}
+{"latent_index": 63, "type": "top-token", "token": 294, "top_token_index": 1, "is_variant": false, "text": ""}
+{"latent_index": 63, "type": "top-token", "token": 294, "top_token_index": 1, "is_variant": true, "text": "As the sun rises, the world awakens."}
+{"latent_index": 63, "type": "connecting-tokens", "tokens": [7282, 29872], "connecting_tokens_index": 0, "text": ""}
+{"latent_index": 63, "type": "connecting-tokens", "tokens": [2669, 12464], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 63, "type": "detecting-dataset-topic", "topics": ["Computer Science", "Supply Chain Management", "Menu Planning and Design", "Engineering", "Industrial Engineering", "Menu Customization"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 64, "type": "top-token", "token": 12358, "top_token_index": 0, "is_variant": false, "text": "Tere, I'm happy to help!"}
+{"latent_index": 64, "type": "top-token", "token": 12358, "top_token_index": 0, "is_variant": true, "text": "Tere, I'm happy to help!"}
+{"latent_index": 64, "type": "top-token", "token": 24604, "top_token_index": 1, "is_variant": false, "text": "The vernacular of the town was a unique blend of old and new."}
+{"latent_index": 64, "type": "top-token", "token": 24604, "top_token_index": 1, "is_variant": true, "text": "The vernacular of the town was a unique blend of old and new."}
+{"latent_index": 64, "type": "connecting-tokens", "tokens": [7384, 12358], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 64, "type": "connecting-tokens", "tokens": [7384, 22540], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 64, "type": "detecting-dataset-topic", "topics": ["Languages", "English", "Cultural Sensitivity", "Sociolinguistics", "Communication", "Language and Social Class"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 65, "type": "top-token", "token": 878, "top_token_index": 0, "is_variant": false, "text": ""}
+{"latent_index": 65, "type": "top-token", "token": 878, "top_token_index": 0, "is_variant": true, "text": "The new mod for the game is really exciting!"}
+{"latent_index": 65, "type": "top-token", "token": 3382, "top_token_index": 1, "is_variant": false, "text": ""}
+{"latent_index": 65, "type": "top-token", "token": 3382, "top_token_index": 1, "is_variant": true, "text": ""}
+{"latent_index": 65, "type": "connecting-tokens", "tokens": [878, 3382], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 65, "type": "connecting-tokens", "tokens": [878, 29885], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 65, "type": "detecting-dataset-topic", "topics": ["Number Theory", "Modular inverses", "Modular arithmetic", "Modifiers", "Modulation", "Modality"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 66, "type": "top-token", "token": 263, "top_token_index": 0, "is_variant": false, "text": "a"}
+{"latent_index": 66, "type": "top-token", "token": 263, "top_token_index": 0, "is_variant": true, "text": "a"}
+{"latent_index": 66, "type": "top-token", "token": 1455, "top_token_index": 1, "is_variant": false, "text": "The hotel's reservation cial department was very helpful."}
+{"latent_index": 66, "type": "top-token", "token": 1455, "top_token_index": 1, "is_variant": true, "text": "The specialist carefully reviewed the medical records."}
+{"latent_index": 66, "type": "connecting-tokens", "tokens": [1455, 7618], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 66, "type": "connecting-tokens", "tokens": [263, 7618], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 66, "type": "detecting-dataset-topic", "topics": ["Engineering", "Biology", "Chemistry", "Meteorology", "Computer Science", "Atmospheric Models"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 67, "type": "top-token", "token": 3081, "top_token_index": 0, "is_variant": false, "text": "The new smartphone has incredible power to process vast amounts of data quickly and efficiently."}
+{"latent_index": 67, "type": "top-token", "token": 3081, "top_token_index": 0, "is_variant": true, "text": "The new electric car has a powerful engine that runs on clean energy and reduces carbon emissions."}
+{"latent_index": 67, "type": "top-token", "token": 5864, "top_token_index": 1, "is_variant": false, "text": "The city is harnessing renewable energy to power its homes."}
+{"latent_index": 67, "type": "top-token", "token": 5864, "top_token_index": 1, "is_variant": true, "text": "The city's energy was palpable as the crowd waited for the concert to begin."}
+{"latent_index": 67, "type": "connecting-tokens", "tokens": [3081, 20346], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 67, "type": "connecting-tokens", "tokens": [3081, 5864], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 67, "type": "detecting-dataset-topic", "topics": ["Nuclear Engineering", "Nuclear Power Plant Economics", "Nuclear Physics", "Nuclear power generation", "Energy Engineering", "Radioactive Waste Management"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 68, "type": "top-token", "token": 7604, "top_token_index": 0, "is_variant": false, "text": "The artist's visual style was unique and captivating."}
+{"latent_index": 68, "type": "top-token", "token": 7604, "top_token_index": 0, "is_variant": true, "text": "The stunning visual effects of the fireworks display lit up the night sky."}
+{"latent_index": 68, "type": "top-token", "token": 9249, "top_token_index": 1, "is_variant": false, "text": "Visual aid needed for a meeting presentation."}
+{"latent_index": 68, "type": "top-token", "token": 9249, "top_token_index": 1, "is_variant": true, "text": "Visual!"}
+{"latent_index": 68, "type": "connecting-tokens", "tokens": [2133, 7604], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 68, "type": "connecting-tokens", "tokens": [7604, 9249], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 68, "type": "detecting-dataset-topic", "topics": ["Communication", "Visual Communication", "public_figures", "Public Speaking", "Feedback Mechanisms", "Feedback Giver's Expertise"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 69, "type": "top-token", "token": 278, "top_token_index": 0, "is_variant": false, "text": "The sun is shining brightly today."}
+{"latent_index": 69, "type": "top-token", "token": 278, "top_token_index": 0, "is_variant": true, "text": "The sun is shining brightly in the sky."}
+{"latent_index": 69, "type": "top-token", "token": 310, "top_token_index": 1, "is_variant": false, "text": "The sun rises of the horizon."}
+{"latent_index": 69, "type": "top-token", "token": 310, "top_token_index": 1, "is_variant": true, "text": "The sun rises of the horizon."}
+{"latent_index": 69, "type": "connecting-tokens", "tokens": [278, 411], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 69, "type": "connecting-tokens", "tokens": [278, 29892], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 69, "type": "detecting-dataset-topic", "topics": ["Chemistry", "Biology", "Spectroscopy", "Molecular Biology", "Electron Spin Resonance (ESR) Spectroscopy", "Photoacoustic Spectroscopy"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 70, "type": "top-token", "token": 2189, "top_token_index": 0, "is_variant": false, "text": "The team will perform well at the competition."}
+{"latent_index": 70, "type": "top-token", "token": 2189, "top_token_index": 0, "is_variant": true, "text": "The musicians will perform at the concert tonight."}
+{"latent_index": 70, "type": "top-token", "token": 15859, "top_token_index": 1, "is_variant": false, "text": "The musicians were performing a beautiful melody on their instruments."}
+{"latent_index": 70, "type": "top-token", "token": 15859, "top_token_index": 1, "is_variant": true, "text": "The musicians were performing a beautiful melody."}
+{"latent_index": 70, "type": "connecting-tokens", "tokens": [2189, 15859], "connecting_tokens_index": 0, "text": "The sun is shining brightly today."}
+{"latent_index": 70, "type": "connecting-tokens", "tokens": [292, 27313], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 70, "type": "detecting-dataset-topic", "topics": ["Music", "Music Festivals", "Music Psychology", "Music Education", "Music Performance", "Music and Performance Anxiety"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 71, "type": "top-token", "token": 884, "top_token_index": 0, "is_variant": false, "text": "Also, I'm ready to assist you!"}
+{"latent_index": 71, "type": "top-token", "token": 884, "top_token_index": 0, "is_variant": true, "text": "Also, I'm ready to assist you!"}
+{"latent_index": 71, "type": "top-token", "token": 871, "top_token_index": 1, "is_variant": false, "text": "I only have a few minutes to chat with you today."}
+{"latent_index": 71, "type": "top-token", "token": 871, "top_token_index": 1, "is_variant": true, "text": "Only the bravest of adventurers dare to explore the mysterious forest."}
+{"latent_index": 71, "type": "connecting-tokens", "tokens": [871, 884], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 71, "type": "connecting-tokens", "tokens": [451, 884], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 71, "type": "detecting-dataset-topic", "topics": ["Music", "Music Therapy", "Music Psychology", "Music Festivals and Culture", "Music Festival Venues", "Music and Movement"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 72, "type": "top-token", "token": 412, "top_token_index": 0, "is_variant": false, "text": "The peacock's pe was magnificent."}
+{"latent_index": 72, "type": "top-token", "token": 412, "top_token_index": 0, "is_variant": true, "text": "The peacock's pe was magnificent."}
+{"latent_index": 72, "type": "top-token", "token": 1568, "top_token_index": 1, "is_variant": false, "text": "I have much to learn before I can become a master chef."}
+{"latent_index": 72, "type": "top-token", "token": 1568, "top_token_index": 1, "is_variant": true, "text": "I have much to learn before I can become a master chef."}
+{"latent_index": 72, "type": "connecting-tokens", "tokens": [412, 1568], "connecting_tokens_index": 0, "text": "The sun is shining brightly today."}
+{"latent_index": 72, "type": "connecting-tokens", "tokens": [1568, 29892], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 72, "type": "detecting-dataset-topic", "topics": ["Music", "History of Music", "The Classical Period", "Genre versatility", "Classical Music", "Ludwig van Beethoven"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 73, "type": "top-token", "token": 328, "top_token_index": 0, "is_variant": false, "text": "The ad for the new restaurant was very appealing."}
+{"latent_index": 73, "type": "top-token", "token": 328, "top_token_index": 0, "is_variant": true, "text": "The ad for the new restaurant was quite enticing."}
+{"latent_index": 73, "type": "top-token", "token": 29888, "top_token_index": 1, "is_variant": false, "text": "Fragrant flowers fill the forest."}
+{"latent_index": 73, "type": "top-token", "token": 29888, "top_token_index": 1, "is_variant": true, "text": "Fragrant flowers fill the forest."}
+{"latent_index": 73, "type": "connecting-tokens", "tokens": [29888, 29899], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 73, "type": "connecting-tokens", "tokens": [2311, 29899], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 73, "type": "detecting-dataset-topic", "topics": ["Languages", "Communication", "Logic", "Semantics", "English", "Dialogue Writing"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 74, "type": "top-token", "token": 2799, "top_token_index": 0, "is_variant": false, "text": "Inst!"}
+{"latent_index": 74, "type": "top-token", "token": 2799, "top_token_index": 0, "is_variant": true, "text": "Inst!"}
+{"latent_index": 74, "type": "top-token", "token": 1570, "top_token_index": 1, "is_variant": false, "text": "The new employee was excited to start their first day on the job."}
+{"latent_index": 74, "type": "top-token", "token": 1570, "top_token_index": 1, "is_variant": true, "text": "The new employee was excited to start their first day on the job."}
+{"latent_index": 74, "type": "connecting-tokens", "tokens": [1570, 2799], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 74, "type": "connecting-tokens", "tokens": [1570, 29915], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 74, "type": "detecting-dataset-topic", "topics": ["Economics", "Food Cost Control", "Regular Financial Reviews", "Welfare Economics", "Marginal Utility", "Labor Economics"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 75, "type": "top-token", "token": 24907, "top_token_index": 0, "is_variant": false, "text": "Mixing colors is a fun activity for kids."}
+{"latent_index": 75, "type": "top-token", "token": 24907, "top_token_index": 0, "is_variant": true, "text": "Mixing colors is a fun activity for kids."}
+{"latent_index": 75, "type": "top-token", "token": 5555, "top_token_index": 1, "is_variant": false, "text": "I'm 'aving a lovely day, thanks for askin'!"}
+{"latent_index": 75, "type": "top-token", "token": 5555, "top_token_index": 1, "is_variant": true, "text": "I'm 'aving a lovely day, thanks!"}
+{"latent_index": 75, "type": "connecting-tokens", "tokens": [292, 24907], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 75, "type": "connecting-tokens", "tokens": [1351, 5555], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 75, "type": "detecting-dataset-topic", "topics": ["Art", "Music", "Textile Arts", "Music Production", "English", "Creative Writing"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 76, "type": "top-token", "token": 13465, "top_token_index": 0, "is_variant": false, "text": "The company is focusing on the integration of new technology into their existing systems."}
+{"latent_index": 76, "type": "top-token", "token": 13465, "top_token_index": 0, "is_variant": true, "text": "The company is focusing on the integration of new technology into their existing systems."}
+{"latent_index": 76, "type": "top-token", "token": 362, "top_token_index": 1, "is_variant": false, "text": "Educationation is the process of acquiring knowledge, skills, and values."}
+{"latent_index": 76, "type": "top-token", "token": 362, "top_token_index": 1, "is_variant": true, "text": "Educationation is the process of acquiring knowledge, skills, and values."}
+{"latent_index": 76, "type": "connecting-tokens", "tokens": [362, 13465], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 76, "type": "connecting-tokens", "tokens": [6724, 13465], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 76, "type": "detecting-dataset-topic", "topics": ["Computer Science", "Software Engineering", "Integration Testing", "Performance", "Business", "Engineering"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 77, "type": "top-token", "token": 29892, "top_token_index": 0, "is_variant": false, "text": "short sentence."}
+{"latent_index": 77, "type": "top-token", "token": 29892, "top_token_index": 0, "is_variant": true, "text": "Short sentence."}
+{"latent_index": 77, "type": "top-token", "token": 607, "top_token_index": 1, "is_variant": false, "text": "Which is your favorite type of music?"}
+{"latent_index": 77, "type": "top-token", "token": 607, "top_token_index": 1, "is_variant": true, "text": "Which is the best way to get to the beach?"}
+{"latent_index": 77, "type": "connecting-tokens", "tokens": [607, 29892], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 77, "type": "connecting-tokens", "tokens": [4049, 29892], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 77, "type": "detecting-dataset-topic", "topics": ["Languages", "History", "English", "Economics", "public_figures", "Cosmology"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 78, "type": "top-token", "token": 1827, "top_token_index": 0, "is_variant": false, "text": "Say hello to the sunshine!"}
+{"latent_index": 78, "type": "top-token", "token": 1827, "top_token_index": 0, "is_variant": true, "text": "Say hi!"}
+{"latent_index": 78, "type": "top-token", "token": 864, "top_token_index": 1, "is_variant": false, "text": "I want to know the best way to learn a new language quickly."}
+{"latent_index": 78, "type": "top-token", "token": 864, "top_token_index": 1, "is_variant": true, "text": "I want to know the best way to learn a new language quickly."}
+{"latent_index": 78, "type": "connecting-tokens", "tokens": [825, 1827], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 78, "type": "connecting-tokens", "tokens": [864, 1827], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 78, "type": "detecting-dataset-topic", "topics": ["Communication", "English", "Interpersonal Communication", "Languages", "Creative Writing", "Verbal Communication"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 79, "type": "top-token", "token": 1088, "top_token_index": 0, "is_variant": false, "text": "The new employee was given a direct tour of the office."}
+{"latent_index": 79, "type": "top-token", "token": 1088, "top_token_index": 0, "is_variant": true, "text": "The director gave the actor direct feedback on their performance."}
+{"latent_index": 79, "type": "top-token", "token": 8415, "top_token_index": 1, "is_variant": false, "text": "The OCR software accurately scanned the ancient manuscript."}
+{"latent_index": 79, "type": "top-token", "token": 8415, "top_token_index": 1, "is_variant": true, "text": "The OCR software accurately scanned the text from the old book."}
+{"latent_index": 79, "type": "connecting-tokens", "tokens": [322, 29892], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 79, "type": "connecting-tokens", "tokens": [1144, 29892], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 79, "type": "detecting-dataset-topic", "topics": ["Culinary Arts", "Ingredient Selection and Sourcing", "Nutrition and Dietary Considerations", "Micronutrients", "Food Labeling", "Nutritional value"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 80, "type": "top-token", "token": 322, "top_token_index": 0, "is_variant": false, "text": "The sun is shining brightly and warmly today."}
+{"latent_index": 80, "type": "top-token", "token": 322, "top_token_index": 0, "is_variant": true, "text": "The sun rises and sets beautifully over the ocean."}
+{"latent_index": 80, "type": "top-token", "token": 29892, "top_token_index": 1, "is_variant": false, "text": "short sentence."}
+{"latent_index": 80, "type": "top-token", "token": 29892, "top_token_index": 1, "is_variant": true, "text": "Short sentence."}
+{"latent_index": 80, "type": "connecting-tokens", "tokens": [322, 29892], "connecting_tokens_index": 0, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 80, "type": "connecting-tokens", "tokens": [322, 29936], "connecting_tokens_index": 1, "text": "The sun is shining brightly today."}
+{"latent_index": 80, "type": "detecting-dataset-topic", "topics": ["subjects", "Pronouns", "Sentence Structure", "Prepositions", "Grammar", "Reflexive pronouns"], "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 81, "type": "top-token", "token": 1634, "top_token_index": 0, "is_variant": false, "text": "The new rep for the company is really enthusiastic about their role."}
+{"latent_index": 81, "type": "top-token", "token": 1634, "top_token_index": 0, "is_variant": true, "text": "The new rep for the company is expected to boost sales."}
+{"latent_index": 81, "type": "top-token", "token": 5141, "top_token_index": 1, "is_variant": false, "text": "The duplicator creates a dup of the original document."}
+{"latent_index": 81, "type": "top-token", "token": 5141, "top_token_index": 1, "is_variant": true, "text": "The duplicator was able to create a perfect dup of the original document."}
+{"latent_index": 81, "type": "connecting-tokens", "tokens": [1634, 5141], "connecting_tokens_index": 0, "text": "The sun is shining brightly today."}
+{"latent_index": 81, "type": "connecting-tokens", "tokens": [1634, 1862], "connecting_tokens_index": 1, "text": "The sun is shining brightly in the clear blue sky."}
+{"latent_index": 81, "type": "detecting-dataset-topic", "topics": ["Biology", "DNA Replication", "Biochemistry", "Cell Biology", "Chemistry", "Molecular Biology"], "text": "The sun is shining brightly in the clear blue sky."}
