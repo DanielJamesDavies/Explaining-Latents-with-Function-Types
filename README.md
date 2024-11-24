@@ -22,8 +22,8 @@ Then place `sae/` in `./SAE/`.
 
 To download Turing-LLM Synthetic Dataset:
 https://www.kaggle.com/datasets/danieljamesdavies/turing-llm-synthetic-dataset
-Then place `phi-3-mini`, `data-augmentation`, and `dataset_paths.txt` in `./input_data/synthetic_dataset`.
+Then place `phi-3-mini`, `data-augmentation`, and `dataset_paths.txt` in `./input_data/synthetic_dataset/`.
 
 To download Turing-LLM Latent Top Sequences:
 https://www.kaggle.com/datasets/danieljamesdavies/turing-llm-latent-top-sequences
-Then place `latents_sae_tokens_from_sequence.h5`, and `latents_sae_values_from_sequence.h5` in `./input_data/latent_top_sequences`.
+Then place `latents_sae_tokens_from_sequence.h5`, and `latents_sae_values_from_sequence.h5` in `./input_data/latent_top_sequences/`.
