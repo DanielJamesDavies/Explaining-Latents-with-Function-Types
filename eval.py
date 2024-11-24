@@ -77,15 +77,16 @@ def run():
                
         # Tokenize Text
         for i, layer_eval_input in enumerate(layer_eval_data):
-            layer_eval_input["text_tokens"] = tokenizer.encode(layer_eval_input["text"])[:64].tolist()
+            layer_eval_input["text_tokens"] = tokenizer.encode(layer_eval_input["text"])[:64]
             if len(layer_eval_input["text_tokens"]) == 0:
                 print("Error. Not Tokens for input: ", layer_eval_input)
                 layer_eval_data[i] = None
                 continue
-            if len(layer_eval_input["text_tokens"] < 64):
+            if len(layer_eval_input["text_tokens"]) < 64:
                 while len(layer_eval_input["text_tokens"]) < 64:
                     layer_eval_input["text_tokens"] = layer_eval_input["text_tokens"] + layer_eval_input["text_tokens"]
                 layer_eval_input["text_tokens"] = layer_eval_input["text_tokens"][:64]
+            print(layer_eval_input["text_tokens"])
         layer_eval_data = [layer_eval_input for layer_eval_input in layer_eval_data if layer_eval_input is not None]
     
         layer_num_sequences_run = 0
