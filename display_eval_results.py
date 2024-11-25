@@ -22,24 +22,60 @@ for layer_index in range(12):
 
 
 
+# # Fractions of Successful Explanations over Layers
+
+# eval_layers_success_fractions = [
+#     len([item for item in layer_eval_data if "success" in item and item["success"] is True]) / len([item for item in layer_eval_data if "success" in item])
+#     for layer_eval_data in eval_data
+# ]
+
+# layer_labels = [str(i+1) for i in range(12)]
+
+# layer_success_df = pd.DataFrame(
+#    dict(
+#       layers=layer_labels,
+#       values=eval_layers_success_fractions
+#    )
+# )
+
+# plt.figure(figsize=(1920 / 160, 1080 / 160), facecolor=background_colour)
+# plt.plot(layer_labels, eval_layers_success_fractions, color="#0044ff")
+# for i, value in enumerate(list(layer_success_df["values"])):
+#     plt.text(i, value+0.01, "{:.2f}".format(value), ha='center', va="bottom", fontsize=13)
+# plt.xticks(ha='center', fontsize=13)
+# plt.xlabel("Layer", fontsize=16, labelpad=20)
+# plt.ylabel("Fraction Successful", fontsize=16, labelpad=20)
+# plt.title("Fraction of Successful Explanations over Layers", fontsize=18, pad=40)
+# mplcyberpunk.add_glow_effects(gradient_fill=True)
+# plt.subplots_adjust(left=0.1, bottom=0.14, right=0.97, top=0.85, wspace=0.2, hspace=0.2)
+# plt.savefig("Fractions of Successful Explanations over Layers.png", facecolor=background_colour, dpi=300)
+
+
+
+
+
 # Fractions of Successful Explanations over Layers
 
-eval_layers_success_fractions = [
-    len([item for item in layer_eval_data if "success" in item and item["success"] is True]) / len([item for item in layer_eval_data if "success" in item])
-    for layer_eval_data in eval_data
-]
+eval_layers_latents_success_fractions = []
+for layer_index in range(12):
+    layer_eval_data = eval_data[layer_index]
+    layer_success_count = 0
+    for latent_index in range(82):
+        if len([item for item in layer_eval_data if item["latent_index"] == latent_index and "success" in item and item["success"] is True]) != 0:
+            layer_success_count += 1
+    eval_layers_latents_success_fractions.append(layer_success_count/82)
 
 layer_labels = [str(i+1) for i in range(12)]
 
 layer_success_df = pd.DataFrame(
    dict(
       layers=layer_labels,
-      values=eval_layers_success_fractions
+      values=eval_layers_latents_success_fractions
    )
 )
 
 plt.figure(figsize=(1920 / 160, 1080 / 160), facecolor=background_colour)
-plt.plot(layer_labels, eval_layers_success_fractions, color="#0044ff")
+plt.plot(layer_labels, eval_layers_latents_success_fractions, color="#0044ff")
 for i, value in enumerate(list(layer_success_df["values"])):
     plt.text(i, value+0.01, "{:.2f}".format(value), ha='center', va="bottom", fontsize=13)
 plt.xticks(ha='center', fontsize=13)
