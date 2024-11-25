@@ -2,3 +2,8 @@
 TuringLLM/model_1722550239_03986.pt
 __pycache__
 SAE/sae
+input_data/synthetic_dataset/data-augmentation
+input_data/synthetic_dataset/phi-3-mini
+input_data/synthetic_dataset/dataset_paths.txt
+input_data/latent_top_sequences/latents_sae_tokens_from_sequence.h5
+input_data/latent_top_sequences/latents_sae_values_from_sequence.h5

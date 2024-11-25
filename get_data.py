@@ -44,7 +44,7 @@ class TuringLLMConfig:
     
 
 def getDatasetPathsData():
-    with open(f'{latents_path}/dataset_paths.txt', 'r') as f:
+    with open('./input_data/synthetic_dataset/dataset_paths.txt', 'r') as f:
         dataset_paths = "<|SPLIT|>".join(f.read().splitlines())
     
     dataset_path_names = {}
@@ -75,7 +75,7 @@ def getDatasetPathsData():
             elif "." not in name:
                 dataset_path_names = getDatasetPathNames(curr_path + "/" + name, dataset_path_names)
         return dataset_path_names
-    dataset_path_names = getDatasetPathNames("../../datasets/text", dataset_path_names)
+    dataset_path_names = getDatasetPathNames("./input_data/synthetic_dataset", dataset_path_names)
         
     dataset_paths_data = [False for _ in range(len(dataset_paths.split("<|SPLIT|>")))]
     for i, dataset_path in enumerate(dataset_paths.split("<|SPLIT|>")):
@@ -283,10 +283,9 @@ def run():
     
     
     # Check Files Exist
-    latent_data_dir_list = os.listdir(latents_path)
-    
-    for name in ['latents_sae_frequencies.pth', 'latents_sae_tokens_from_sequence.h5', 'latents_sae_values_from_sequence.h5']:
-        if name not in latent_data_dir_list:
+    latent_top_sequences_dir_list = os.listdir("./input_data/latent_top_sequences")
+    for name in ['latents_sae_tokens_from_sequence.h5', 'latents_sae_values_from_sequence.h5']:
+        if name not in latent_top_sequences_dir_list:
             print(f"File Not Found: {name}")
             
             
@@ -321,11 +320,11 @@ def run():
         # Get Data
         print("")
         print("  Getting Top Sequences Data...")
-        with h5py.File(f"{latents_path}/latents_sae_tokens_from_sequence.h5", 'r') as h5f:
+        with h5py.File("./input_data/latent_top_sequences/latents_sae_tokens_from_sequence.h5", 'r') as h5f:
             layer_top_tokens = np.asarray(h5f['tensor'][layer_index, :, :, :])
             layer_top_dataset_paths = torch.tensor(layer_top_tokens[..., 0])
             layer_top_tokens = torch.tensor(layer_top_tokens[..., 1:]).to(device)
-        with h5py.File(f"{latents_path}/latents_sae_values_from_sequence.h5", 'r') as h5f:
+        with h5py.File("./input_data/latent_top_sequences/latents_sae_values_from_sequence.h5", 'r') as h5f:
             layer_top_values = np.asarray(h5f['tensor'][layer_index, :, :, :])
             layer_top_values = torch.tensor(layer_top_values[..., 1:]).to(device)
         
@@ -367,14 +366,6 @@ def run():
         print("")
         print("  For DetectingDatasetTopic()")
         collectDataForDetectingDatasetTopic(layer_top_dataset_paths, folder_to_save, tokenizer, dataset_paths_data)
-            
-        # For SpecificWord()
-        print("")
-        print("  For SpecificWord()")
-        
-        # For DetectingSpecificConcept()
-        print("")
-        print("  For DetectingSpecificConcept()")
         
         
         
